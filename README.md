@@ -66,3 +66,18 @@ $ `rails new railsgirls-signup --database=postgresql`
 + push to remote repo
 
 ---
+
+$ `rake db:create`  
+$ `rails db:migrate`
+
+---
+
+[Add User scaffold](https://github.com/jendiamond/railsgirls-signup/issues/1)
+
+$ `rails generate scaffold User first_name:string last_name:string email:string phone:string zip_code:string twitter_handle:string github_user_name:string over_21:boolean age:integer operating_system:string workshop:datetime rating:string coach:string pair:string accepted:boolean attended:boolean phase_five_coach:boolean`
+
+---
+
+[Add RSpec & SimpleCov & Pry](https://github.com/jendiamond/railsgirls-signup/issues/6)
+
+---
