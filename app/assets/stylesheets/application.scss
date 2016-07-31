@@ -9,6 +9,18 @@
 body {
   padding-top: 10px;
   font-family: 'Raleway', sans-serif;
+  background-color: rgba(223, 255, 246, 0.2);
+  background-image: image-url("circuit.jpg");
+  background-repeat: repeat;
+  //background-size: cover;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .container {
@@ -45,3 +57,94 @@ th {
   margin:auto;
   font-size: 1.5em;
 }
+
+.jumbotron {
+background-color: #C6E2DA;
+/*background-color:none !important;*/
+}
+
+sup {
+  font-size: 50%;
+  }
+
+
+
+
+/* navbar */
+$bgDefault      : #857f6e;
+$bgHighlight    : #ccc09e;
+$colDefault     : #ccc09e;
+$colHighlight   : #f7f2f2;
+$dropDown       : false;
+#footer {
+background-color: $bgDefault;
+}
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgHighlight;}}}}}
+    @if $dropDown {
+      .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+//https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.7764705882352941,0.8862745098039215,0.8549019607843137,0.9709228824272537,0.7761061946902655,1,0.8761061946902655,1,0.9646017699115125,0.8,0.7528825632450885,0.6208849557522125,0.7,0.6679792320867683,0.5782743362831858&swatchOrder=0,1,2,3,4
+
+//http://work.smarchal.com/twbscolor/scss/857f6eccc09eccc09ef7f2f20
+
+//http://cache2.asset-cache.net/gc/165558706-circuit-board-vector-seamless-tile-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=5FYT8MJhDhE4ib2nzioBeA3pidenBbJav5iO5jwbqh0%3D
