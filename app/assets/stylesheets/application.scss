@@ -23,6 +23,15 @@ img {
   left: 0;
 }
 
+.btn:hover, .btn:focus, .btn.focus {
+    color: #000;
+    text-decoration: none;
+}
+
+a:active {
+  color: #fff;
+}
+
 a:visited {
   color: #fff;
 }
