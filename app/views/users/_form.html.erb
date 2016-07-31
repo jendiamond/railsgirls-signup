@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="actions">
+    <h3><%= f.submit %></h3>
+  </div>
+
   <div class="field">
     <%= f.label :first_name %>
     <%= f.text_field :first_name %>
@@ -42,7 +46,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :github_user_name %>
+    <%= f.label :github_user_name %> https://github.com/
     <%= f.text_field :github_user_name %>
   </div>
 
@@ -96,7 +100,4 @@
     <%= f.check_box :phase_five_coach %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

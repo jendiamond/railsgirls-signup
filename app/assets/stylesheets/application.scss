@@ -57,6 +57,17 @@ th {
   margin:auto;
   font-size: 1.5em;
 }
+a.hover {
+  background-color: #fff;
+}
+
+td,th {
+  padding-left:4px;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc09e;;
+}
 
 .jumbotron {
 background-color: #C6E2DA;
@@ -66,9 +77,6 @@ background-color: #C6E2DA;
 sup {
   font-size: 50%;
   }
-
-
-
 
 /* navbar */
 $bgDefault      : #857f6e;

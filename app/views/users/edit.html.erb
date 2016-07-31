@@ -1,6 +1,13 @@
-<h1>Editing User</h1>
+<div class="jumbotron">
+  <h2 style="font-size:250%">Edit User - <%= @user.first_name %> 
+    <%= @user.last_name %></h2>
 
-<%= render 'form', user: @user %>
+  <h3><%= link_to 'Show', @user %> |
+  <%= link_to 'Back', users_path %></h3>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+  <hr style="background-color: #fff; border-top: 1px dashed #8c8b8b;"/>
+
+  <%= render 'form', user: @user %>
+
+
+</div>

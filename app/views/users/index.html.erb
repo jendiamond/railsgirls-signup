@@ -1,7 +1,8 @@
+<div class="jumbotron">
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-
+<h2>Potential Rails Girls October&nbsp;21<sup>st</sup>&nbsp;&&nbsp;22<sup>nd</sup>&nbsp;2016</h2>
+<h3><%= link_to 'New User', new_user_path %></h3>
 <table>
   <thead>
     <tr>
@@ -9,19 +10,12 @@
       <th>Last name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Zip code</th>
-      <th>Twitter handle</th>
-      <th>Github user name</th>
-      <th>Over 21</th>
+      <th>Zip</th>
+      <th>Twitter</th>
+      <th>Github</th>
+      <th style="text-align:center">21?</th>
       <th>Age</th>
-      <th>Operating system</th>
-      <th>Workshop</th>
-      <th>Rating</th>
-      <th>Coach</th>
-      <th>Pair</th>
-      <th>Accepted</th>
-      <th>Attended</th>
-      <th>Phase five coach</th>
+      <th>OS</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,31 +23,22 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.phone %></td>
-        <td><%= user.zip_code %></td>
-        <td><%= user.twitter_handle %></td>
-        <td><%= user.github_user_name %></td>
-        <td><%= user.over_21 %></td>
-        <td><%= user.age %></td>
-        <td><%= user.operating_system %></td>
-        <td><%= user.workshop %></td>
-        <td><%= user.rating %></td>
-        <td><%= user.coach %></td>
-        <td><%= user.pair %></td>
-        <td><%= user.accepted %></td>
-        <td><%= user.attended %></td>
-        <td><%= user.phase_five_coach %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="width:100px"><%= user.first_name %></td>
+        <td style="width:100px"><%= user.last_name %></td>
+        <td style="width:150px"><%= user.email %></td>
+        <td style="width:200px"><%= user.phone %></td>
+        <td style="width:50px"><%= user.zip_code %></td>
+        <td style="width:100px"><%= user.twitter_handle %></td>
+        <td style="width:100px"><%= user.github_user_name %></td>
+        <td style="width:50px"><%= user.over_21 %></td>
+        <td style="width:50px"><%= user.age %></td>
+        <td style="width:50px"><%= user.operating_system %></td>
+        <td style="width:50px; text-align:center"><%= link_to 'Show', user %></td>
+        <td style="width:50px; text-align:center"><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td style="width:60px; text-align:center"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New User', new_user_path %>
+</div>
