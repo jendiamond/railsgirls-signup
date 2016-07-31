@@ -23,6 +23,15 @@ img {
   left: 0;
 }
 
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #000;
+  background-color: #000;
+}
+
 .container {
   font-family: Raleway;
 }
