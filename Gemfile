@@ -12,9 +12,15 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'ffaker', '~> 2.2'
   gem 'pry', '~> 0.10.4'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.1'
   gem 'simplecov', '~> 0.12.0', :require => false
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 group :development do
