@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @user.zip_code %>
+</p>
+
+<p>
+  <strong>Twitter handle:</strong>
+  <%= @user.twitter_handle %>
+</p>
+
+<p>
+  <strong>Github user name:</strong>
+  <%= @user.github_user_name %>
+</p>
+
+<p>
+  <strong>Over 21:</strong>
+  <%= @user.over_21 %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @user.operating_system %>
+</p>
+
+<p>
+  <strong>Workshop:</strong>
+  <%= @user.workshop %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @user.rating %>
+</p>
+
+<p>
+  <strong>Coach:</strong>
+  <%= @user.coach %>
+</p>
+
+<p>
+  <strong>Pair:</strong>
+  <%= @user.pair %>
+</p>
+
+<p>
+  <strong>Accepted:</strong>
+  <%= @user.accepted %>
+</p>
+
+<p>
+  <strong>Attended:</strong>
+  <%= @user.attended %>
+</p>
+
+<p>
+  <strong>Phase five coach:</strong>
+  <%= @user.phase_five_coach %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
