@@ -23,6 +23,24 @@ img {
   left: 0;
 }
 
+.btn:hover, .btn:focus, .btn.focus {
+    color: #000;
+    text-decoration: none;
+}
+
+a:active {
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #000;
+  background-color: #000;
+}
+
 .container {
   font-family: Raleway;
 }
