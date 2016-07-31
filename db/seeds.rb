@@ -13,7 +13,7 @@ bool = boo.shuffle
                 email: 'jane@email.com',
                 twitter_handle: FFaker::Name.first_name,
                 phone: FFaker::PhoneNumber.short_phone_number,
-                zipcode: FFaker::AddressUS.zip_code,
+                zip_code: FFaker::AddressUS.zip_code,
                 over_21: bool[0],
                 operating_system: opsys[0] )
 end
