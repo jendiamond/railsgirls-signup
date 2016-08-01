@@ -23,11 +23,6 @@ img {
   left: 0;
 }
 
-.btn:hover, .btn:focus, .btn.focus {
-    color: #000;
-    text-decoration: none;
-}
-
 p {
     line-height: 1.25;
 }
@@ -58,6 +53,11 @@ th {
   border-bottom: 1px solid #DDD;
 }
 
+hr {
+  background-color: #fff;
+  border-top: 1px dashed #8c8b8b;
+}
+
 .market-header {
   text-align: center;
 }
@@ -72,6 +72,17 @@ th {
 }
 .title {
   font-size: 3em;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+    color: #000;
+    text-decoration: none;
+}
+
+rg-button {
+  padding-top: 80px;
+  margin:auto;
+  font-size: 1.5em;
 }
 
 .button {
@@ -89,6 +100,15 @@ td,th {
 
 tr:nth-child(even) {
     background-color: #ccc09e;;
+}
+
+input[type="checkbox"] {
+    margin: 8px 0 0;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 1px \9;
+    line-height: normal;
 }
 
 .jumbotron {
