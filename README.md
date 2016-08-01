@@ -24,7 +24,7 @@ $ `rake db:migrate`
 $ `rvm list rubies`
 
 $ `rvm rubies`
-
+```
 =* ruby-2.1.4 [ x86_64 ]
    ruby-2.2.1 [ x86_64 ]
    ruby-2.2.2 [ x86_64 ]
@@ -33,6 +33,7 @@ $ `rvm rubies`
 # => - current
 # =* - current && default
 #  * - default
+```
 
 ---
 
