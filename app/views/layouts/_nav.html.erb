@@ -9,11 +9,11 @@
       <a href="/" class="navbar-brand">Rails Girls LA</a>
     </div>
 
-    <div class="collapse navbar-collapse" id ="railsgirls">
+    <div class="collapse navbar-collapse " id ="railsgirls">
         <ul class="nav navbar-nav">
-          <li role="presentation" class="active"><a href="#">FAQ</a></li>
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="#">Contact</a></li>
+          <li role="presentation"><%= link_to 'FAQ', static_pages_faq_path %></a></li>
+          <li role="presentation"><%= link_to 'About', static_pages_about_path %></li>
+          <li role="presentation" class="active"><%= link_to 'Apply', new_user_path %></li>
         </ul>
         <form action="" class="navbar-form navbar-left" role="search">
           <div class="form-group">
@@ -25,4 +25,4 @@
   </div>
 </div>
 
-<!-- https://www.youtube.com/watch?v=-YQn166PfIE -->
+//<!-- https://www.youtube.com/watch?v=-YQn166PfIE -->

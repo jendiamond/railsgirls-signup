@@ -28,6 +28,10 @@ img {
     text-decoration: none;
 }
 
+p {
+    line-height: 1.25;
+}
+
 a:active {
   color: #fff;
 }
@@ -37,8 +41,8 @@ a:visited {
 }
 
 a:hover {
-  color: #000;
-  background-color: #000;
+  color: pink;
+  text-decoration: none;
 }
 
 .container {
