@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'
   root 'static_pages#home'

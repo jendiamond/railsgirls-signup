@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Boolean question:</strong>
+  <%= @question.boolean_question %>
+</p>
+
+<p>
+  <strong>String question:</strong>
+  <%= @question.string_question %>
+</p>
+
+<p>
+  <strong>Text question:</strong>
+  <%= @question.text_question %>
+</p>
+
+<p>
+  <strong>Integer question:</strong>
+  <%= @question.integer_question %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
