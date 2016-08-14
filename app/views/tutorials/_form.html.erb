@@ -1,0 +1,17 @@
+<div style="background-color:#ccc09e; padding:10px">
+  <%= simple_form_for(@tutorial) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :try_ruby %>
+      <%= f.input :terminal %>
+      <%= f.input :try_git %>
+      <%= f.input :html_css %>
+      <%= f.association :user %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Try ruby:</strong>
+  <%= @tutorial.try_ruby %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @tutorial.terminal %>
+</p>
+
+<p>
+  <strong>Try git:</strong>
+  <%= @tutorial.try_git %>
+</p>
+
+<p>
+  <strong>Html css:</strong>
+  <%= @tutorial.html_css %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tutorial.user %>
+</p>
+
+<%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
+<%= link_to 'Back', tutorials_path %>
