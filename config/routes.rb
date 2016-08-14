@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tutorials
   resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'

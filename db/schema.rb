@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814064902) do
+ActiveRecord::Schema.define(version: 20160814222626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,30 @@ ActiveRecord::Schema.define(version: 20160814064902) do
     t.integer  "integer_question"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.boolean  "newbie"
+    t.boolean  "html_css"
+    t.boolean  "tutorials"
+    t.boolean  "study_group"
+    t.boolean  "program"
+    t.boolean  "website"
+    t.boolean  "work"
+    t.boolean  "bootcamp"
+    t.boolean  "compsci"
+    t.boolean  "rlsgrl_rlsbrg"
+    t.string   "continue"
+    t.string   "support"
+    t.string   "experience"
+  end
+
+  create_table "tutorials", force: :cascade do |t|
+    t.boolean  "try_ruby"
+    t.boolean  "terminal"
+    t.boolean  "try_git"
+    t.boolean  "html_css"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tutorials_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,4 +77,5 @@ ActiveRecord::Schema.define(version: 20160814064902) do
     t.datetime "updated_at",       null: false
   end
 
+  add_foreign_key "tutorials", "users"
 end

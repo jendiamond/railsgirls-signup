@@ -1,14 +1,27 @@
-<%= simple_form_for(@question) do |f| %>
-  <%= f.error_notification %>
+<div style="background-color:#ccc09e; padding:10px">
+  <p>Beginners will be given priority.</br>
+  Applications will be reviewed as they arrive.</p>
 
-  <div class="form-inputs">
-    <%= f.input :boolean_question %>
-    <%= f.input :string_question %>
-    <%= f.input :text_question %>
-    <%= f.input :integer_question %>
-  </div>
+  <%= simple_form_for(@question) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs">
+      <%= f.input :newbie, prompt: "I am a total newbie :)" %>
+      <%= f.input :html_css, prompt: "I am familiar with HTML / CSS"  %>
+      <%= f.input :tutorials, prompt: "I have done online Ruby / Rails tutorials"  %>
+      <%= f.input :study_group, prompt: "I attend a Study Group"  %>
+      <%= f.input :program, prompt: "I have written a program (any language)"  %>
+      <%= f.input :website, prompt: "I have created a website and launched it on the web"  %>
+      <%= f.input :work, prompt: "I currently work in tech"  %>
+      <%= f.input :bootcamp, prompt: "I have attended an immersive bootcamp program"  %>
+      <%= f.input :compsci, prompt: "I have or am getting a CS degree"  %>
+      <%= f.input :rlsgrl_rlsbrg, prompt: "I have attended Rails Girls / Railsbridge"  %>
+      <%= f.input :continue, prompt: "Do you think you will continue learning to program after the workshop?"  %>
+      <%= f.input :support, prompt: "Do you have any people to support you with this goal?"  %>
+      <%= f.input :experience, prompt: "Previous Experience. Do you have any previous programming experience? Please explain. What languages? For how long? What did you make? In school or on your own? Do you currently program? Did you attend a code school? This helps us group students when working in small groups." %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "SUBMIT ♥", class: "rg-button" %>
+    </div>
+  <% end %>
+</div>
