@@ -1,10 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /users" do
-    it "works! (now write some real specs)" do
-      get users_path
-      expect(response).to have_http_status(200)
-    end
+describe "user", type: :request do
+
+  let!(:user) { FactoryGirl.build(:user) }
+    let(:params) {{ user: { email: user.email} }}
+
+  it "should create a user" do
+    post '/users', params
+    expect(response.code).to eq("302")
+    expect(response).to redirect_to(user_path/1)
+    user_email = params[:user][:email]
+    expect(User.where(email: user_email).first.email).to eq(user_email)
   end
 end
