@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   def show
+    @name = User.first
   end
 
   # GET /questions/new
