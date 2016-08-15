@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Boolean question:</strong>
-  <%= @question.boolean_question %>
-</p>
+  <p>
+    <strong>Total newbie?:</strong>
+    <%= @question.newbie %>
+  </p>
 
-<p>
-  <strong>String question:</strong>
-  <%= @question.string_question %>
-</p>
+  <p>
+    <strong>Familiar with HTML / CSS?:</strong>
+    <%= @question.html_css %>
+  </p>
 
-<p>
-  <strong>Text question:</strong>
-  <%= @question.text_question %>
-</p>
+  <p>
+    <strong>Online Ruby / Rails tutorials:</strong>
+    <%= @question.tutorials %>
+  </p>
 
-<p>
-  <strong>Integer question:</strong>
-  <%= @question.integer_question %>
-</p>
+  <p>
+    <strong>Attend a Study Group?:</strong>
+    <%= @question.study_group %>
+  </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+  <%= link_to 'Edit', edit_question_path(@question) %> |
+  <%= link_to 'Back', questions_path %>
+</div>

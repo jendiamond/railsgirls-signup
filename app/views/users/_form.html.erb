@@ -1,26 +1,26 @@
 <div style="background-color:#ccc09e; padding:10px">
-<%= simple_form_for @user do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <%= simple_form_for @user do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= f.input :first_name, required: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :email, required: true %>
+    <%= f.input :twitter_handle, placeholder: "https://twitter.com/your-user-name", required: false %>
+    <%= f.input :github_user_name, placeholder: "https://github.com/your-user-name", required: false %>
+    <%= f.input :phone, required: false %>
+    <%= f.input :zip_code, required: false %>
+    <%= f.input :over_21, required: true %>
+    <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
+    <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], as: :radio_buttons %>
+    <%= f.button :submit, "SUBMIT ♥", class: "rg-button" %>
   <% end %>
-  <%= f.input :first_name, required: true %>
-  <%= f.input :last_name, required: true %>
-  <%= f.input :email, required: true %>
-  <%= f.input :twitter_handle, placeholder: "https://twitter.com/your-user-name", required: false %>
-  <%= f.input :github_user_name, placeholder: "https://github.com/your-user-name", required: false %>
-  <%= f.input :phone, required: false %>
-  <%= f.input :zip_code, required: false %>
-  <%= f.input :over_21, required: true %>
-  <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
-  <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], as: :radio_buttons %>
-  <%= f.button :submit, "SUBMIT ♥", class: "rg-button" %>
-<% end %>
 </div>

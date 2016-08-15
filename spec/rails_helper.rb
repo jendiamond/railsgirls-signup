@@ -1,3 +1,12 @@
+require 'database_cleaner'
+require 'simplecov'
+SimpleCov.start do
+  add_filter "/spec/"
+  add_group "Controllers", "/controllers/"
+  add_group "Models", "/models/"
+  coverage_dir "public/coverage"
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

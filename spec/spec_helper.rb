@@ -1,5 +1,12 @@
 require 'simplecov'
-SimpleCov.start 'rails'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+])
+
+SimpleCov.start 'rails' do
+  coverage_dir 'spec/simplecov'
+end
 
 RSpec.configure do |config|
   #https://github.com/DatabaseCleaner/database_cleaner
