@@ -6,6 +6,11 @@ class TutorialsController < ApplicationController
     @tutorials = Tutorial.all
   end
 
+  def user_tutorials
+    @user = User.find(params[:user_id])
+    @tutorial = @user.tutorial
+  end
+
   # GET /tutorials/1
   def show
   end
@@ -46,12 +51,11 @@ class TutorialsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_tutorial
       @tutorial = Tutorial.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def tutorial_params
       params.require(:tutorial).permit(:try_ruby, :terminal, :try_git, :html_css, :user_id)
     end
