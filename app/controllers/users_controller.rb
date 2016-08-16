@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @question = @user.build_question
   end
 
   # GET /users/1/edit
@@ -24,7 +25,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to new_question, notice: 'User was successfully created.'
+      @user.create_tutorial
+      redirect_to user_tutorials_path(@user), notice: 'User was successfully created.'
     else
       render :new
     end
@@ -53,6 +55,12 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :phone, :zip_code, :twitter_handle, :github_user_name, :over_21, :age, :operating_system, :workshop, :rating, :coach, :pair, :accepted, :attended, :phase_five_coach)
+      params.require(:user).permit(:first_name, :last_name, :email, :phone,
+        :zip_code, :twitter_handle, :github_user_name, :over_21, :age,
+        :operating_system, :workshop, :rating, :coach, :pair, :accepted,
+        :attended, :phase_five_coach,
+          :question_attributes => [:newbie,:html_css,:tutorials,:study_group,
+          :program,:website,:work,:bootcamp,:compsci,:rlsgrl_rlsbrg,
+          :continue,:support,:experience])
     end
 end

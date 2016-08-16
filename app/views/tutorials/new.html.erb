@@ -1,5 +1,64 @@
-<h1>New Tutorial</h1>
+<div class="jumbotron">
+  <h2>Level 2 - Tutorial</h2>
+  <h3><%= @user.first_name %> have passed the first level of acceptance
+to become an official Rails Girl :)</h3>
+<p>
+The Second Level if you choose to accept
+is to complete 4 tutorials that will help you
+get the most out of the Rails Girls workshop.
+</p>
 
-<%= render 'form', tutorial: @tutorial %>
+<p>Upload them to me as you complete them.
+Don't wait until they are all done.
+</p>
+<p>
+Do the best you can. Have fun learning. <3
+Even if you think you know this stuff,
+I promise you will learn something new.
+</p>
 
-<%= link_to 'Back', tutorials_path %>
+<p>
+If this seems like too much work or too hard
+let us know.
+</p>
+
+<p>
+If this feels too basic for you then you should
+consider coaching at Rails Girls.
+There will be a coach training session.
+</p>
+<h3>Ready… Set… Go…</h3>
+<hr/>
+<div style="background-color:#ccc09e; padding:10px">
+<p>
+
+🐈1. Go through Try Ruby  http://tryruby.org
+Type next to start.
+<h4>Upload a screenshot of the last page you complete.</h4>
+</p>
+<hr/>
+<p>
+2. Go through Try Git https://try.github.io/levels/1/challenges/1
+Write down all the git commands you learned.
+<h4>Upload a list of all the commands you learned.</h4>
+</p>
+<hr/>
+<p>
+🍀3. Go through The Terminal slide show.
+https://speakerdeck.com/jendiamond/the-terminal-know-your-command-line-an-introduction
+Write down all the commands you learned. Even if you are not quite sure how to use them. I just want you to start getting familiar with hearing the words and have a basic understanding of what they do.
+<h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
+</p>
+<hr/>
+<p>
+🐍4. Go through Learn to Make Awesome Websites. (Only the first one.)
+https://dash.generalassemb.ly/
+You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from General Assembly. But you can unsubscribe from that once they start sending it to you.
+<h4>Upload a screenshot of the last page you complete.</h4>
+</p>
+
+</div>
+  <%= render 'form', tutorial: @tutorial %>
+
+  <%= link_to 'Back', tutorials_path %>
+</div>
