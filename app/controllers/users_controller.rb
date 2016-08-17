@@ -23,10 +23,10 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-
+    
     if @user.save
       @user.create_tutorial
-      redirect_to user_tutorials_path(@user), notice: 'User was successfully created.'
+      redirect_to user_tutorial_path(@user,@user.tutorial), notice: 'User was successfully created.'
     else
       render :new
     end

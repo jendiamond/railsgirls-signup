@@ -1,29 +1,133 @@
-<p id="notice"><%= notice %></p>
-
+<div class="jumbotron">
+  <h2>Level 2 - Tutorial SHOW</h2>
+  <h3><%= @user.first_name %> have passed the first level of acceptance
+to become an official Rails Girl :)</h3>
 <p>
-  <strong>Try ruby:</strong>
-  <%= @tutorial.try_ruby %>
+The Second Level if you choose to accept
+is to complete 4 tutorials that will help you
+get the most out of the Rails Girls workshop.
+</p>
+
+<p>Upload them as you complete them.
+Don't wait until they are all done.
+</p>
+<p>
+Do the best you can. Have fun learning.
+Even if you think you know this stuff,
+you will learn something new.
 </p>
 
 <p>
-  <strong>Terminal:</strong>
-  <%= @tutorial.terminal %>
+If this seems like too much work or too hard
+let us know. railsgirlsla@gmail.com
 </p>
 
 <p>
-  <strong>Try git:</strong>
-  <%= @tutorial.try_git %>
+If this feels too basic for you then you should
+consider coaching at Rails Girls.
+There will be a coach training session.
 </p>
+<h3>Ready… Set… Go…</h3>
+<hr/>
 
-<p>
-  <strong>Html css:</strong>
-  <%= @tutorial.html_css %>
-</p>
+<div style="background-color:#ccc09e; padding:10px">
 
-<p>
-  <strong>User:</strong>
-  <%= @tutorial.user %>
-</p>
+  <div style="background-color:#fff; padding:5px; margin 2px">
+    <div style="background-color:#ccc09e; padding:10px">
+      <p>
+        <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
+        Type next to start.
+        <h4>Upload a screenshot of the last page you complete.</h4>
+        <p>This should be the last page of the tutorial. :)</p>
+          <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.file_field :tryruby_image, label: "Try Ruby" %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Upload" %>
+            </div>
+          <% end -%>
+          <% if @tutorial.missing_image?(@tutorial.tryruby_image).nil? %>
+            <%= image_tag @tutorial.tryruby_image.url(:medium,) %>
+          <% end %>
+      </p>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
-<%= link_to 'Back', tutorials_path %>
+  <div style="background-color:#fff; padding:5px; margin 2px">
+    <div style="background-color:#ccc09e; padding:10px">
+      <p>
+        <%= image_tag "octocat.png" %> 2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
+        Write down all the git commands you learned.
+        <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
+          <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.file_field :trygit_image, label: "Try Ruby" %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Upload" %>
+            </div>
+          <% end -%>
+          <% if @tutorial.missing_image?(@tutorial.trygit_image).nil? %>
+            <%= image_tag @tutorial.trygit_image.url(:medium,) %>
+          <% end %>
+      </p>
+    </div>
+  </div>
+
+  <div style="background-color:#fff; padding:5px; margin 2px">
+    <div style="background-color:#ccc09e; padding:10px">
+      <p>
+        <%= image_tag("clover.gif") %> 3. <a href="https://speakerdeck.com/jendiamond/the-terminal-know-your-command-line-an-introduction">The Terminal slide show</a>
+        
+        Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.
+        <h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
+          <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.file_field :terminal_image, label: "Try Ruby" %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Upload" %>
+            </div>
+          <% end -%>
+          <% if @tutorial.missing_image?(@tutorial.terminal_image).nil? %>
+            <%= image_tag @tutorial.terminal_image.url(:medium,) %>
+          <% end %>
+      </p>
+    </div>
+  </div>
+
+  <div style="background-color:#fff; padding:5px; margin 2px">
+    <div style="background-color:#ccc09e; padding:10px">
+      <p>
+        <%= image_tag("snake.png") %>4. <a href="https://dash.generalassemb.ly/">Learn to Make Awesome Websites</a> (Only the first one.)
+        
+        You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from GA. You can unsubscribe once they start sending it.
+        <h4>Upload a screenshot of the last page you complete.</h4>
+          <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.file_field :htmlcss_image, label: "Try Ruby" %>
+            </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Upload" %>
+            </div>
+          <% end -%>
+          <% if @tutorial.missing_image?(@tutorial.htmlcss_image).nil? %>
+            <%= image_tag @tutorial.htmlcss_image.url(:medium,) %>
+          <% end %>
+      </p>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
+<hr/>
+
+  </div>
+  <%#= link_to 'Back', user_tutorials_path(@user) %>
+</div>

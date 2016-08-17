@@ -13,6 +13,8 @@ class TutorialsController < ApplicationController
 
   # GET /tutorials/1
   def show
+    @user = User.find(params[:user_id])
+    @tutorial = @user.tutorial
   end
 
   # GET /tutorials/new
@@ -26,7 +28,9 @@ class TutorialsController < ApplicationController
 
   # POST /tutorials
   def create
-    @tutorial = Tutorial.new(tutorial_params)
+    @user = User.find(params[:user_id])
+    @tutorial = @user.tutorial.new(tutorial_params)
+    # @tutorial = Tutorial.new(tutorial_params)
 
     if @tutorial.save
       redirect_to @tutorial, notice: 'Tutorial was successfully created.'
@@ -37,11 +41,14 @@ class TutorialsController < ApplicationController
 
   # PATCH/PUT /tutorials/1
   def update
-    if @tutorial.update(tutorial_params)
-      redirect_to @tutorial, notice: 'Tutorial was successfully updated.'
-    else
-      render :edit
+    if params[:tutorial]
+      if @tutorial.update(tutorial_params)
+        redirect_to user_tutorial_path(@user, @tutorial), notice: 'Tutorial was successfully updated.'  and return
+      else
+        render :edit
+      end
     end
+    redirect_to :back and return
   end
 
   # DELETE /tutorials/1
@@ -53,10 +60,12 @@ class TutorialsController < ApplicationController
   private
 
     def set_tutorial
-      @tutorial = Tutorial.find(params[:id])
+      @user = User.find(params[:user_id])
+      @tutorial = @user.tutorial
     end
 
     def tutorial_params
-      params.require(:tutorial).permit(:try_ruby, :terminal, :try_git, :html_css, :user_id)
+      params.require(:tutorial).permit(:tryruby_image, :trygit_image,
+        :terminal_image, :htmlcss_image, :image, :user_id)
     end
 end
