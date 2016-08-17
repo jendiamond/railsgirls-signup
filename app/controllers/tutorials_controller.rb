@@ -17,6 +17,7 @@ class TutorialsController < ApplicationController
 
   # GET /tutorials/new
   def new
+    @user = User.find(params[:user_id])
     @tutorial = Tutorial.new
   end
 
@@ -27,11 +28,11 @@ class TutorialsController < ApplicationController
   # POST /tutorials
   def create
     @user = User.find(params[:user_id])
-    @tutorial = @user.tutorial.new(tutorial_params)
+    @tutorial = Tutorial.new(tutorial_params.merge(user_id: params[:user_id]))
     # @tutorial = Tutorial.new(tutorial_params)
 
     if @tutorial.save
-      redirect_to @tutorial, notice: 'Tutorial was successfully created.'
+      redirect_to user_tutorials_url, notice: 'Tutorial was successfully created.'
     else
       render :new
     end
@@ -60,7 +61,7 @@ class TutorialsController < ApplicationController
     end
 
     def tutorial_params
-      params.require[:user,:tutorial].permit(:tryruby_image, :trygit_image,
+      params.require(:tutorial).permit(:tryruby_image, :trygit_image,
         :terminal_image, :htmlcss_image, :image, :user_id, :try_ruby,
         :try_git, :terminal, :html_css)
     end
