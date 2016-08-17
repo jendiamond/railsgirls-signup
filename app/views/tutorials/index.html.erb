@@ -17,11 +17,11 @@
   <tbody>
     <% @tutorials.each do |tutorial| %>
       <tr>
-        <td><%= tutorial.try_ruby %></td>
-        <td><%= tutorial.terminal %></td>
-        <td><%= tutorial.try_git %></td>
-        <td><%= tutorial.html_css %></td>
         <td><%= tutorial.user %></td>
+        <td><%= image_tag @tutorial.tryruby_image.url(:thumb) %></td>
+        <td><%= image_tag @tutorial.terminal_image.url(:thumb) %></td>
+        <td><%= image_tag @tutorial.trygit_image.url(:thumb) %></td>
+        <td><%= image_tag @tutorial.htmlcss_image.url(:thumb) %></td>
         <td><%= link_to 'Show', tutorial %></td>
         <td><%= link_to 'Edit', edit_tutorial_path(tutorial) %></td>
         <td><%= link_to 'Destroy', tutorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>

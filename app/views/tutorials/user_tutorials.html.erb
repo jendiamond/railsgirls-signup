@@ -37,6 +37,7 @@ There will be a coach training session.
         <%#= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
         Type next to start.
         <h4>Upload a screenshot of the last page you complete.</h4>
+        <%= image_tag @tutorial.tryruby_image.url(:medium,) %> -->
       </p>
     </div>
   </div>
@@ -47,6 +48,7 @@ There will be a coach training session.
         <%#= image_tag("octocat.png") %>2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
         Write down all the git commands you learned.
         <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
+        <%= image_tag @tutorial.trygit_image.url(:medium,) %> -->
       </p>
     </div>
   </div>
@@ -58,6 +60,7 @@ There will be a coach training session.
         
         Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.
         <h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
+        <%= image_tag @tutorial.terminal_image.url(:medium,) %>
       </p>
     </div>
   </div>
@@ -69,31 +72,16 @@ There will be a coach training session.
         
         You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from GA. You can unsubscribe once they start sending it.
         <h4>Upload a screenshot of the last page you complete.</h4>
+        <%= image_tag @yser_tutorial.htmcss_image.url(:medium,) %>
       </p>
     </div>
   </div>
+    <%= render 'form', tutorial: @tutorial %>
+  <div>
+
+  </div>
 </div>
 <hr/>
-
-<!--   <div style="background-color:#ccc09e; padding:10px">
-    <%= simple_form_for @user do |f| %>
-
-      <%= f.error_notification %>
-
-      <%= f.simple_fields_for :tutorial do |t| %>
-        <div class="form-inputs">
-          <%= t.input :try_ruby %>
-          <%= t.input :terminal %>
-          <%= t.input :try_git %>
-          <%= t.input :html_css %>
-        </div>
-      <% end %>
-
-      <div class="form-actions">
-        <%= f.button :submit %>
-      </div>
-    <% end %>
-  </div> -->
 
   </div>
   <%#= link_to 'Back', user_tutorials_path(@user) %>
