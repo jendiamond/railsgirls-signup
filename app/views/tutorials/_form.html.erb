@@ -1,12 +1,13 @@
 <div style="background-color:#ccc09e; padding:10px">
-  <%= simple_form_for @tutorial do |f| %>
+  <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
+
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :try_ruby %>
-      <%= f.input :terminal %>
-      <%= f.input :try_git %>
-      <%= f.input :html_css %>
+      <%= f.file_field :tryruby_image, label: "Try Ruby" %>
+      <%= f.file_field :terminal_image, label: "Terminal" %>
+      <%= f.file_field :trygit_image, label: "Try Git" %>
+      <%= f.file_field :htmlcss_image, label: "HTML & CSS" %>
     </div>
 
     <div class="form-actions">
