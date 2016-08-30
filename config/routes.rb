@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :members
   resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'

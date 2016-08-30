@@ -1,13 +1,9 @@
-<div class="jumbotron">
-  <h2 style="font-size:250%">Edit User - <%= @user.first_name %> 
-    <%= @user.last_name %></h2>
+<h2 style="font-size:250%">Edit User - <%= @user.first_name %> 
+  <%= @user.last_name %></h2>
 
-  <h3><%= link_to 'Show', @user %> |
-  <%= link_to 'Back', users_path %></h3>
+<h3><%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %></h3>
 
-  <hr/>
+<hr/>
 
-  <%= render 'form', user: @user %>
-
-
-</div>
+<%= render 'form', user: @user %>
