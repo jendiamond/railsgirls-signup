@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <h2>Level 2 - Tutorial SHOW</h2>
-  <h3><%= @user.first_name %> have passed the first level of acceptance
+  <h3><b><%= @user.first_name.capitalize %></b>, you have passed the first level of acceptance
 to become an official Rails Girl :)</h3>
 <p>
 The Second Level if you choose to accept
@@ -39,6 +39,8 @@ There will be a coach training session.
         Type next to start.
         <h4>Upload a screenshot of the last page you complete.</h4>
         <p>This should be the last page of the tutorial. :)</p>
+        <!-- Cloudinary::Uploader.upload(params[:image]) -->
+
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
