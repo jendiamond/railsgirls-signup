@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :members
+  devise_for :members, controllers: {registrations: "registrations"}
   resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'
