@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: rails-girls-la
+  api_key: '185592844281798'
+  api_secret: 9rRwE1rE3jBG0Fkl0noysFM_8r8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: rails-girls-la
+  api_key: '185592844281798'
+  api_secret: 9rRwE1rE3jBG0Fkl0noysFM_8r8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: rails-girls-la
+  api_key: '185592844281798'
+  api_secret: 9rRwE1rE3jBG0Fkl0noysFM_8r8
+  enhance_image_tag: true
+  static_image_support: false
