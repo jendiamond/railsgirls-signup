@@ -1,5 +1,4 @@
 class Tutorial < ApplicationRecord
-  attr_accessible :image,:tryruby_image,:trygit_image,:terminal_image,:htmlcss_image
 
 mount_uploader :tryruby_image, PlacephotoUploader
 
