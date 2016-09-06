@@ -8,6 +8,13 @@
 
 <hr style="background-color: #fff; border-top: 1px dashed #8c8b8b;"/>
 
+<p><strong>Id: </strong><%= @user.id %></p>
+
+<% if current_member %>
+  <p><strong>Username </strong><%= current_member.username %>!</p>
+  <p><strong>Password </strong><%= current_member.email %>!</p>
+<% end %>
+
 <p><strong>Phone: </strong><%= @user.phone %></p>
 
 <p><strong>Zip: </strong><%= @user.zip_code %></p>
@@ -36,4 +43,4 @@
 
 <p><strong>Phase five coach: </strong><%= @user.phase_five_coach %></p>
 
-<%= render 'users/answers' %>
+<%#= render 'users/answers' %>

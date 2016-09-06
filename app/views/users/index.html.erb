@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>Id</th>
+      <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
       <th>Zip</th>
@@ -22,8 +22,8 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td style="width:100px"><%= user.first_name %></td>
-        <td style="width:100px"><%= user.last_name %></td>
+        <td style="width:20px"><%= user.id %></td>
+        <td style="width:150px"><%= user.first_name %> <%= user.last_name %></td>
         <td style="width:150px"><%= user.email %></td>
         <td style="width:200px"><%= user.phone %></td>
         <td style="width:50px"><%= user.zip_code %></td>
@@ -37,6 +37,27 @@
         <td style="width:60px; text-align:center"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+
   </tbody>
 </table>
+<br>
+<br>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Tut Id</th>
+      <th>User Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%# @tutorials.each do |user| %>
+      <tr>
+        <td>tutorial</td>
+        <td style="width:20px"><%#= tutorial.id %></td>
+        <td style="width:20px"><%#= tutorial.user_id %></td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table> -->
 <br>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   root 'static_pages#home'
   resources :users do
-    resources :tutorials, only: [:show, :update]
+    resources :tutorials, only: [:show, :update, :index]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
+    @tutorials = Tutorial.all
   end
 
   # GET /users/1
