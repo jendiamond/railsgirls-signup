@@ -17,12 +17,12 @@
           <div class=" nav navbar-nav pull-right user-info">
             <% if current_member %>
               <li role="presentation">Hello <%= current_member.email %>!</li>
-              <li><%= link_to "Sign out", destroy_member_session_path, method: 'delete' %></li>
+              <li><%= link_to "Sign out", destroy_member_session_path, method: :delete %></li>
             <% else %></li>
               <li role="presentation"><%= link_to "Sign In", new_member_session_path %></li>
               <li role="presentation"><%= link_to "Sign Up", new_member_registration_path %></li>
-      <% end %>
-    </div>
+            <% end %>
+        </div>
         </ul>
 <!--         <form action="" class="navbar-form navbar-left" role="search">
           <div class="form-group">
