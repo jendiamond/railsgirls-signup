@@ -1,8 +1,9 @@
+<div style="background-color:#ccc09e; padding:10px">
 <p id="notice"><%= notice %></p>
 
 <h2>Potential Rails Girls October&nbsp;21<sup>st</sup>&nbsp;&&nbsp;22<sup>nd</sup>&nbsp;2016</h2>
 <h3><%= link_to 'New User', new_user_path %></h3>
-<table>
+<table style="background-color:#C6E2DA">
   <thead>
     <tr>
       <th>Id</th>
@@ -25,7 +26,7 @@
         <td style="width:20px"><%= user.id %></td>
         <td style="width:150px"><%= user.first_name %> <%= user.last_name %></td>
         <td style="width:150px"><%= user.email %></td>
-        <td style="width:200px"><%= user.phone %></td>
+        <td style="width:100px"><%= user.phone %></td>
         <td style="width:50px"><%= user.zip_code %></td>
         <td style="width:100px"><%= user.twitter_handle %></td>
         <td style="width:100px"><%= user.github_user_name %></td>
@@ -61,3 +62,4 @@
   </tbody>
 </table> -->
 <br>
+</div>
