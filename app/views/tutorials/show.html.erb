@@ -60,8 +60,14 @@ There will be a coach training session.
               <%= f.button :submit, "Upload" %>
             </div>
           <% end -%>
+
           <% if @tutorial.missing_image?(@tutorial.tryruby_image).nil? %>
             <%= image_tag @tutorial.tryruby_image.url(:medium,) %>
+          <% end %>
+
+          <% if @tutorial.try_ruby %>
+            <h3>Sweet! You have passed the Fox Level.</h3>
+            <%= image_tag "tryruby-success.png" %>
           <% end %>
       </p>
     </div>
@@ -82,8 +88,14 @@ There will be a coach training session.
               <%= f.button :submit, "Upload" %>
             </div>
           <% end -%>
+
           <% if @tutorial.missing_image?(@tutorial.trygit_image).nil? %>
             <%= image_tag @tutorial.trygit_image.url(:medium,) %>
+          <% end %>
+
+          <% if @tutorial.try_git %>
+            <h3> Awesome! You have passed the Octocat Level.</h3>
+            <%= image_tag "trygit-success.jpg" %>
           <% end %>
       </p>
     </div>
@@ -105,8 +117,14 @@ There will be a coach training session.
               <%= f.button :submit, "Upload" %>
             </div>
           <% end -%>
+
           <% if @tutorial.missing_image?(@tutorial.terminal_image).nil? %>
             <%= image_tag @tutorial.terminal_image.url(:medium,) %>
+          <% end %>
+
+          <% if @tutorial.terminal %>
+            <h3>Hooray! You have passed the CloverLevel.</h3>
+            <%= image_tag "terminal-success.jpg" %>
           <% end %>
       </p>
     </div>
@@ -128,8 +146,14 @@ There will be a coach training session.
               <%= f.button :submit, "Upload" %>
             </div>
           <% end -%>
+
           <% if @tutorial.missing_image?(@tutorial.htmlcss_image).nil? %>
             <%= image_tag @tutorial.htmlcss_image.url(:medium,) %>
+          <% end %>
+
+          <% if @tutorial.html_css %>
+            <h3>Fantastic! You have passed the Serpent Level. </h3>
+            <%= image_tag "htmlcss-success.jpg" %>
           <% end %>
       </p>
     </div>
