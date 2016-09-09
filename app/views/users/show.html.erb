@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h3><%= link_to 'Edit', edit_user_path(@user) %> |
+<h3><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'You sure?' } %> |
 <%= link_to 'Back', users_path %></h3>
 
 <h2 style="font-size:250%"><%= @user.first_name %>
