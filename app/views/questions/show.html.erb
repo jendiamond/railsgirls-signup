@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
 
-<h2>Id: <% user_id %> Rating:<%= @question.newbie %></h2>
+<h2>Id: <%= @question.user_id %> Rating:<%= @question.newbie %></h2>
   <p>
     <strong>Total newbie?:</strong>
     <%= @question.newbie %>
@@ -27,42 +27,42 @@
     <%= @question.program %>
   </p>
 
-    <p>
+  <p>
     <strong>Created and launched a website?:</strong>
     <%= @question.website %>
   </p>
 
-    <p>
+  <p>
     <strong>Do you work in the technical field?:</strong>
     <%= @question.work %>
   </p>
 
-    <p>
+  <p>
     <strong>Have you attended a bootcamp?:</strong>
     <%= @question.bootcamp %>
   </p>
 
-    <p>
+  <p>
     <strong>Are you studying CS?:</strong>
     <%= @question.compsci %>
   </p>
 
-    <p>
+  <p>
     <strong>Have you previously attended a Rails Girls or Railsbridge?:</strong>
     <%= @question.rlsgrl_rlsbrg %>
   </p>
 
-    <p>
+  <p>
     <strong>Do you think you will continue learning to program after the workshop?:</strong>
     <%= @question.continue %>
   </p>
 
-    <p>
+  <p>
     <strong>Do you have any people to support you with this goal?:</strong>
     <%= @question.support %>
   </p>
 
-    <p>
+  <p>
     <strong>Previous Experience:</strong>
     <%= @question.support %>
   </p>
