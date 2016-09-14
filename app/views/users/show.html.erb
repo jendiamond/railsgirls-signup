@@ -15,19 +15,17 @@
   <p><strong>Password </strong><%= current_member.email %>!</p>
 <% end %>
 
-<p><strong>Phone: </strong><%= @user.phone %></p>
+<p><strong>Phone: </strong><%= @user.phone %> | <strong>Zip: </strong><%= @user.zip_code %></p>
 
-<p><strong>Zip: </strong><%= @user.zip_code %></p>
+<p><strong>Twitter: </strong><%= @user.twitter_handle %> | <strong>Github: </strong><%= @user.github_user_name %></p>
 
-<p><strong>Twitter: </strong><%= @user.twitter_handle %></p>
-
-<p><strong>Github: </strong><%= @user.github_user_name %></p>
-
-<p><strong>Over 21 ?: </strong><%= @user.over_21 %></p>
-
-<p><strong>Age: </strong><%= @user.age %></p>
+<p><strong>Over 21 ?: </strong><%= @user.over_21 %> | <strong>Age: </strong><%= @user.age %></p>
 
 <p><strong>OS: </strong><%= @user.operating_system %></p>
+
+
+
+<hr/>
 
 <p><strong>Workshop: </strong><%= @user.workshop %></p>
 

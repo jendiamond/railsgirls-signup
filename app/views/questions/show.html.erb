@@ -1,24 +1,8 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
   <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %></strong></h2>
-  <% count = 0 %>
-<% if @question.html_css %>
- <% count + 1 %>
-<% end %>
-<% if @question.tutorials %>
- <% count + 1 %>
-<% end %>
-<% if @question.study_group %>
- <% count + 1 %>
-<% end %>
-<% if @question.program %>
- <% count + 1 %>
-<% end %>
-<% if @question.website %>
- <% count + 1 %>
-<% end %>
-<%= count %>
-  <h2>Id: <%= @question.user_id %> Count:<%= count %></h2>
+
+  <h2>Id: <%= @question.user_id %> Count:<%= @question.rating_count %></h2>
 
   <p>
     Red: Yes / Green: No
