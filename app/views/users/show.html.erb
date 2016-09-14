@@ -16,15 +16,13 @@
 
 <p>
   <% if !@user.over_21 %>
-    <p><strong>Age: </strong><%= @user.age %></p>
+    <strong>Age: </strong><%= @user.age %>
   <% else %>
-    <p>Over 21</p>
+    Over 21
   <% end %> | <strong>Phone: </strong><%= @user.phone %> | <strong>Zip: </strong><%= @user.zip_code %>
 </p>
 
 <p><strong>Twitter: </strong><%= @user.twitter_handle %> | <strong>Github: </strong><%= @user.github_user_name %></p>
-
-
 
 <hr/>
 <div class="questions">
