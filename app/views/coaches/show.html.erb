@@ -5,8 +5,19 @@
 </h2>
 
 <p>
-  <strong>Students:</strong>
-  <%= @coach.student1 %> | <%= @coach.student2 %>
+  <%= @coach.operating_system %>
+  <% if @coach.spokeo %>
+    &nbsp;|&nbsp;Works at Spokeo. :)
+  <% end %>
+</p>
+
+<p>
+  <strong>Days available:</strong>
+  <%= @coach.days %>
+  <% if @coach.student1 && @coach.student2 %>
+    <strong>&nbsp;|&nbsp;Students:</strong>
+    <%= @coach.student1 %> | <%= @coach.student2 %>
+  <% end %>
 </p>
 
 <p>
