@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h2>
-  <strong><%= @coach.first_name @coach.last_name %></strong>
-  <%= @coach.last_name %>
+  <strong><%= @coach.first_name %> <%= @coach.last_name %></strong>
 </h2>
 
 <p>
@@ -11,8 +10,7 @@
 </p>
 
 <p>
-  <strong>Email: </strong><%= @coach.email %> |   <strong>Phone: </strong>
-  <%= @coach.phone %>
+  <%= @coach.email %> | <%= @coach.phone %>
 </p>
 
 <p>
@@ -26,35 +24,33 @@
 </p>
 
 <p>
-  <strong>Attended as student:</strong>
-  <%= @coach.attended_as_student %>
+  <% if @coach.attended_as_student %>
+    <%= image_tag("green.png") %> Attended as student
+  <% end %>
 </p>
 
-<p>
-  <strong>Coached april 13:</strong>
-  <%= @coach.coached_april_13 %>
+<p><strong>Coached at:</strong>
+  <br/>
+  <% if @coach.coached_april_13 %>
+    <%= image_tag("green.png") %> Pivotal April 2013
+  <% end %>
+<br/>
+  <% if @coach.coached_march_14 %>
+    <%= image_tag("green.png") %> Innovate Pasadena March 2014
+  <% end %>
+<br/>
+  <% if @coach.coached_april_15 %>
+    <%= image_tag("green.png") %> Pivotal April 2015
+  <% end %>
+<br/>
+  <% if @coach.coached_august_15 %>
+    <%= image_tag("green.png") %> Spokeo August 2015
+  <% end %>
+<br/>
+  <% if @coach.coached_march_16 %>
+    <%= image_tag("green.png") %> Zest Finance March 2016
+  <% end %>
 </p>
-
-<p>
-  <strong>Coached march 14:</strong>
-  <%= @coach.coached_march_14 %>
-</p>
-
-<p>
-  <strong>Coached april 15:</strong>
-  <%= @coach.coached_april_15 %>
-</p>
-
-<p>
-  <strong>Coached august 15:</strong>
-  <%= @coach.coached_august_15 %>
-</p>
-
-<p>
-  <strong>Coached march 16:</strong>
-  <%= @coach.coached_march_16 %>
-</p>
-
 <p>
   <strong>Notes:</strong>
   <%= @coach.notes %>
