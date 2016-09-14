@@ -108,17 +108,26 @@
   </p>
 <hr/>
   <p>
-    Will continue<br/><%= @question.continue %>
+    <i>Will continue?</i><br/><%= @question.continue %>
   </p>
 
   <p>
-    Has support<br/><%= @question.support %>
+    <i>Has support?</i><br/><%= @question.support %>
   </p>
 
   <p>
-    Previous Experience<br/><%= @question.support %>
+    <i>Previous Experience?</i><br/><%= @question.support %>
   </p>
 </div>
+
+<hr/>
+<h3>Tutorials</h3>
+  <% if @tutorial.try_ruby %>
+    <%= image_tag "tryruby-success.png" %>
+  <% end %> 
+  <% if @tutorial.try_git %>
+    <%= image_tag "trygit-success.jpg" %>
+  <% end %>
 <hr/>
 
 <p><strong>Workshop: </strong><%= @user.workshop %></p>
@@ -134,5 +143,3 @@
 <p><strong>Attended: </strong><%= @user.attended %></p>
 
 <p><strong>Phase five coach: </strong><%= @user.phase_five_coach %></p>
-
-<%#= render 'users/answers' %>
