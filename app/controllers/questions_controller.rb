@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   def show
-    @name = User.first
+    @name = User.find_by id:(@question.user_id)
   end
 
   # GET /questions/new

@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
-
-  <h2>Id: <% @questionuser_id %> Rating:<%= @question.newbie %></h2>
+  <h2>Name: <% @name %></h2>
+  <h2>Id: <% @question.user_id %> Rating:<%= @question.newbie %></h2>
   <p>
     <strong>Total newbie?:</strong>
     <%= @question.newbie %>
@@ -21,7 +21,7 @@
     <strong>Attend a Study Group?:</strong>
     <%= @question.study_group %>
   </p>
-------
+
   <p>
     <strong>Have you ever written a program?:</strong>
     <%= @question.program %>
