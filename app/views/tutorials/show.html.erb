@@ -72,6 +72,12 @@ There will be a coach training session.
       </p>
     </div>
   </div>
+  <div>
+    <% if @user.accepted %>
+     <h3>Fantastic! You have passed the Serpent Level. </h3>
+            <%= image_tag "htmlcss-success.jpg" %>
+          <% end %>
+  </div>
 
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
