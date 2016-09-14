@@ -2,19 +2,23 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
+    <%= f.input :first_name, required: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :email, required: true %>
+    <%= f.input :phone, required: false %>
+    <%= f.input :days, collection: [ "Friday and Saturday", "Friday only", "Saturday only"],label: "I can commit to...", required: true, as: :radio_buttons %>
+    <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], required: true, as: :radio_buttons %>
+    <%= f.input :spokeo, collection: [ "yes", "no"], label: "Do you work at Spokeo?", as: :radio_buttons %>
     <%= f.input :twitter, placeholder: "https://twitter.com/your-user-name", required: false %>
     <%= f.input :github, placeholder: "https://github.com/your-user-name", required: false %>
-    <%= f.input :job, label: "Job / Position" %>
+    <%= f.input :job, label: "Job Title, Company" %>
     <%= f.input :attended_as_student, as: :radio_buttons %>
-    <%= f.input :coached_april_13, as: :radio_buttons %>
-    <%= f.input :coached_march_14, as: :radio_buttons %>
-    <%= f.input :coached_april_15, as: :radio_buttons %>
-    <%= f.input :coached_august_15, as: :radio_buttons %>
-    <%= f.input :coached_march_16, as: :radio_buttons %>
-    <%= f.input :notes, label: "Anything you want to add or ask. :)" %>
+    <%= f.input :coached_april_13, label: "I coached RailsGirlsLA on April 2013 at Pivotal", as: :radio_buttons %>
+    <%= f.input :coached_march_14, label: "I coached RailsGirlsLA on March 2014 at Innovate Pasadena", as: :radio_buttons %>
+    <%= f.input :coached_april_15, label: "I coached RailsGirlsLA on April 2015 at Pivotal", as: :radio_buttons %>
+    <%= f.input :coached_august_15, label: "I coached RailsGirlsLA on August 2015 at Spokeo", as: :radio_buttons %>
+    <%= f.input :coached_march_16, label: "I coached RailsGirlsLA on March 2016 at Zest Finance", as: :radio_buttons %>
+    <%= f.input :notes, label: "Anything you want to add or ask. :) List your past students if you can remember them." %>
   </div>
 
   <div class="form-actions">
