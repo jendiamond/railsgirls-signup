@@ -60,6 +60,13 @@
      <%= image_tag("red.png") %>
     <% end %> | Attended RailsGirls or Railsbridge
   </p>
+  <p>
+    <% if @question.work %>
+      <%= image_tag("green.png") %>
+    <% else %>
+     <%= image_tag("red.png") %>
+    <% end %> | Work in tech
+  </p>
 <hr/>
   <p>
     <% if @question.newbie %>
@@ -110,14 +117,7 @@
     <% end %> | Website
   </p>
 <hr/>
-  <p>
-    <% if @question.work %>
-      <%= image_tag("green.png") %>
-    <% else %>
-     <%= image_tag("red.png") %>
-    <% end %> | Work in tech
-  </p>
-<hr/>
+
   <p>
     <strong><i>Will continue?</i></strong><br/><%= @question.continue %>
   </p>
