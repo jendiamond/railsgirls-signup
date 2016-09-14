@@ -1,0 +1,25 @@
+<%= simple_form_for(@coach) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :twitter %>
+    <%= f.input :github %>
+    <%= f.input :job %>
+    <%= f.input :student1 %>
+    <%= f.input :student2 %>
+    <%= f.input :attended_as_student %>
+    <%= f.input :coached_april_13 %>
+    <%= f.input :coached_march_14 %>
+    <%= f.input :coached_april_15 %>
+    <%= f.input :coached_august_15 %>
+    <%= f.input :coached_march_16 %>
+    <%= f.input :notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

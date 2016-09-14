@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Coaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Twitter</th>
+      <th>Github</th>
+      <th>Job</th>
+      <th>Student1</th>
+      <th>Student2</th>
+      <th>Attended as student</th>
+      <th>Coached april 13</th>
+      <th>Coached march 14</th>
+      <th>Coached april 15</th>
+      <th>Coached august 15</th>
+      <th>Coached march 16</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coaches.each do |coach| %>
+      <tr>
+        <td><%= coach.first_name %></td>
+        <td><%= coach.last_name %></td>
+        <td><%= coach.email %></td>
+        <td><%= coach.twitter %></td>
+        <td><%= coach.github %></td>
+        <td><%= coach.job %></td>
+        <td><%= coach.student1 %></td>
+        <td><%= coach.student2 %></td>
+        <td><%= coach.attended_as_student %></td>
+        <td><%= coach.coached_april_13 %></td>
+        <td><%= coach.coached_march_14 %></td>
+        <td><%= coach.coached_april_15 %></td>
+        <td><%= coach.coached_august_15 %></td>
+        <td><%= coach.coached_march_16 %></td>
+        <td><%= coach.notes %></td>
+        <td><%= link_to 'Show', coach %></td>
+        <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
+        <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coach', new_coach_path %>
