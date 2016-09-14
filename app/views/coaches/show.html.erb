@@ -1,43 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @coach.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
+<h2>
+  <strong><%= @coach.first_name @coach.last_name %></strong>
   <%= @coach.last_name %>
+</h2>
+
+<p>
+  <strong>Students:</strong>
+  <%= @coach.student1 %> | <%= @coach.student2 %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @coach.email %>
+  <strong>Email: </strong><%= @coach.email %> |   <strong>Phone: </strong>
+  <%= @coach.phone %>
 </p>
 
 <p>
-  <strong>Twitter:</strong>
-  <%= @coach.twitter %>
-</p>
-
-<p>
-  <strong>Github:</strong>
+  <strong>Twitter: </strong><%= @coach.twitter %> | <strong>Github: </strong>
   <%= @coach.github %>
 </p>
 
 <p>
-  <strong>Job:</strong>
+  <strong>Job Title, Company:</strong>
   <%= @coach.job %>
-</p>
-
-<p>
-  <strong>Student1:</strong>
-  <%= @coach.student1 %>
-</p>
-
-<p>
-  <strong>Student2:</strong>
-  <%= @coach.student2 %>
 </p>
 
 <p>
