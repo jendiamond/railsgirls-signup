@@ -25,8 +25,23 @@
 <p><strong>Twitter: </strong><%= @user.twitter_handle %> | <strong>Github: </strong><%= @user.github_user_name %></p>
 
 <hr/>
+<h3><strong>Tutorials</strong></h3>
+  <% if @tutorial.try_ruby %>
+    <%= image_tag "tryruby-success.png", width: '75' %>
+  <% end %> 
+  <% if @tutorial.try_git %>
+    <%= image_tag "trygit-success.jpg", width: '75' %>
+  <% end %>
+    <% if @tutorial.terminal %>
+    <%= image_tag "terminal-success.jpg", width: '75' %>
+  <% end %> 
+  <% if @tutorial.html_css %>
+    <%= image_tag "htmlcss-success.jpg", width: '75' %>
+  <% end %>
+<hr/>
+
 <div class="questions">
-  <h2><strong>Questions</h2>
+  <h3><strong>Questions</strong></h3>
   <hr/>
   <p>
     <strong>Green: Yes / Red: No</strong>
@@ -120,14 +135,6 @@
   </p>
 </div>
 
-<hr/>
-<h3>Tutorials</h3>
-  <% if @tutorial.try_ruby %>
-    <%= image_tag "tryruby-success.png", width: '75' %>
-  <% end %> 
-  <% if @tutorial.try_git %>
-    <%= image_tag "trygit-success.jpg", width: '75' %>
-  <% end %>
 <hr/>
 
 <p><strong>Workshop: </strong><%= @user.workshop %></p>
