@@ -5,7 +5,6 @@
 
 <h2 style="font-size:250%"><%= @user.first_name %>
   <%= @user.last_name %> &nbsp; | &nbsp; <%= @user.email %></h3>
-<p><strong>OS: </strong><%= @user.operating_system %></p>
 
 <hr style="background-color: #fff; border-top: 1px dashed #8c8b8b;"/>
 
@@ -15,7 +14,7 @@
 <% end %>
 
 <p>
-  <% if !@user.over_21 %>
+  <strong>OS: </strong><%= @user.operating_system %> | <% if !@user.over_21 %>
     <strong>Age: </strong><%= @user.age %>
   <% else %>
     Over 21
@@ -41,11 +40,8 @@
 <hr/>
 
 <div class="questions">
-  <h3><strong>Questions</strong></h3>
-  <hr/>
+  <h3><strong>Questions - Green: Yes / Red: No</strong></h3>
   <p>
-    <strong>Green: Yes / Red: No</strong>
-  <br/>
     <% if @question.bootcamp %>
       <%= image_tag("green.png") %>
     <% else %>
@@ -123,15 +119,15 @@
   </p>
 <hr/>
   <p>
-    <i>Will continue?</i><br/><%= @question.continue %>
+    <strong><i>Will continue?</i></strong><br/><%= @question.continue %>
   </p>
 
   <p>
-    <i>Has support?</i><br/><%= @question.support %>
+    <strong><i>Has support?</i></strong><br/><%= @question.support %>
   </p>
 
   <p>
-    <i>Previous Experience?</i><br/><%= @question.support %>
+    <strong><i>Previous Experience?</i></strong><br/><%= @question.support %>
   </p>
 </div>
 
