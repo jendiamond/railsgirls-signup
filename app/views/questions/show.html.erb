@@ -1,26 +1,43 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
-  <h2>Name: <%= @user.first_name %> <%= @user.last_name %></h2>
-  <h2>Id: <%= @question.user_id %> Rating:<%= @user.rating %></h2>
+  <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %></strong></h2>
+  <% count = 0 %>
+<% if @question.html_css %>
+ <% count + 1 %>
+<% end %>
+<% if @question.tutorials %>
+ <% count + 1 %>
+<% end %>
+<% if @question.study_group %>
+ <% count + 1 %>
+<% end %>
+<% if @question.program %>
+ <% count + 1 %>
+<% end %>
+<% if @question.website %>
+ <% count + 1 %>
+<% end %>
+<%= count %>
+  <h2>Id: <%= @question.user_id %> Count:<%= count %></h2>
 
   <p>
-    Red:Yes / Green: No
+    Red: Yes / Green: No
     <br/>
-    <strong>Attended Bootcamp:</strong>
+    Attended Bootcamp:
     <% if @question.bootcamp %>
       <%= image_tag("red.png") %>
     <% else %>
      <%= image_tag("green.png") %>
     <% end %>
 
-    <strong>Studying CS:</strong>
+    Studying CS:</strong>
     <% if @question.compsci %>
       <%= image_tag("red.png") %>
     <% else %>
      <%= image_tag("green.png") %>
     <% end %>
 
-    <strong>Attended RailsGirls or Railsbridge:</strong>
+    Attended RailsGirls or Railsbridge:
     <% if @question.rlsgrl_rlsbrg %>
       <%= image_tag("red.png") %>
     <% else %>
@@ -29,49 +46,78 @@
   </p>
 <hr/>
   <p>
-    <strong>Newbie?:</strong>
-    <%= @question.newbie %>
+    Newbie?:
+    <% if @question.newbie %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
   <p>
-    <strong>HTML/CSS?:</strong>
+    HTML/CSS?:
     <%= @question.html_css %>
+    <% if @question.html_css %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
   <p>
-    <strong>Tutorials:</strong>
-    <%= @question.tutorials %>
+    Tutorials:
+    <% if @question.tutorials %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
   <p>
-    <strong>Study Group?:</strong>
-    <%= @question.study_group %>
+    <Study Group?:
+    <% if @question.study_group %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
   <p>
-    <strong>Written a program?:</strong>
-    <%= @question.program %>
+    Written a program?:
+    <% if @question.program %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
   <p>
-    <strong>Website?:</strong>
-    <%= @question.website %>
+    Website?:
+    <% if @question.website %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 <hr/>
   <p>
-    <strong>Work in the tech?:</strong>
-    <%= @question.work %>
+    Work in tech?:
+    <% if @question.work %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
   </p>
 
 
 <hr/>
   <p>
-    <strong>Do you think you will continue learning to program after the workshop?:</strong>
+    <strong>Will continue?:</strong>
     <%= @question.continue %>
   </p>
 
   <p>
-    <strong>Do you have any people to support you with this goal?:</strong>
+    <strong>Support?:</strong>
     <%= @question.support %>
   </p>
 
