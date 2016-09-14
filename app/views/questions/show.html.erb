@@ -3,111 +3,98 @@
   <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %></strong></h2>
 
   <h2>Id: <%= @question.user_id %></h2>
-
+<hr/>
   <p>
-    <strong>green: Yes / red: No</strong>
-    <br/>
-    Attended Bootcamp:
+    <strong>Green: Yes / Red: No</strong>
     <% if @question.bootcamp %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Attended Bootcamp
 <br/>
-    Studying CS:</strong>
     <% if @question.compsci %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Studying CS
 <br/>
-    Attended RailsGirls or Railsbridge:
     <% if @question.rlsgrl_rlsbrg %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Attended RailsGirls or Railsbridge
   </p>
 <hr/>
   <p>
-    Newbie?:
     <% if @question.newbie %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Newbie
   </p>
 
   <p>
-    HTML/CSS?:
     <%= @question.html_css %>
     <% if @question.html_css %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | HTML/CSS
   </p>
 
   <p>
-    Tutorials:
     <% if @question.tutorials %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Tutorials
   </p>
 
   <p>
-    <Study Group?:
     <% if @question.study_group %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Study Group
   </p>
 
   <p>
-    Written a program?:
+    
     <% if @question.program %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Written a program
   </p>
 
   <p>
-    Website?:
     <% if @question.website %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Website
   </p>
 <hr/>
   <p>
-    Work in tech?:
     <% if @question.work %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
-    <% end %>
+    <% end %> | Work in tech
   </p>
 
 
 <hr/>
   <p>
-    <strong>Will continue?:</strong>
-    <%= @question.continue %>
+    <%= @question.continue %> | Will continue
   </p>
 
   <p>
-    <strong>Support?:</strong>
-    <%= @question.support %>
+    <%= @question.support %> | Has support
   </p>
 
   <p>
-    <strong>Previous Experience:</strong>
-    <%= @question.support %>
+    <%= @question.support %> | Previous Experience
   </p>
 
   <%= link_to 'Edit', edit_question_path(@question) %> |
