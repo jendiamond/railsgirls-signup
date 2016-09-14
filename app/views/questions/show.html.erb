@@ -4,28 +4,30 @@
   <h2>Id: <%= @question.user_id %> Rating:<%= @user.rating %></h2>
 
   <p>
+    Red:Yes / Green: No
+    <br/>
     <strong>Attended Bootcamp:</strong>
     <% if @question.bootcamp %>
-      <%= image_tag("red.gif") %>
+      <%= image_tag("red.png") %>
     <% else %>
-     false
+     <%= image_tag("green.png") %>
     <% end %>
 
     <strong>Studying CS:</strong>
     <% if @question.compsci %>
-      <%= image_tag("red.gif") %>
+      <%= image_tag("red.png") %>
     <% else %>
-     false
+     <%= image_tag("green.png") %>
     <% end %>
 
     <strong>Attended RailsGirls or Railsbridge:</strong>
     <% if @question.rlsgrl_rlsbrg %>
-      <%= image_tag("red.gif") %>
+      <%= image_tag("red.png") %>
     <% else %>
-     false
+     <%= image_tag("green.png") %>
     <% end %>
   </p>
-
+<hr/>
   <p>
     <strong>Newbie?:</strong>
     <%= @question.newbie %>
