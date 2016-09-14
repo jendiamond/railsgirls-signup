@@ -1,27 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h3><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'You sure?' } %> |
+<h3><strong>Id: </strong><%= @user.id %> | <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'You sure?' } %> |
 <%= link_to 'Back', users_path %></h3>
 
 <h2 style="font-size:250%"><%= @user.first_name %>
   <%= @user.last_name %> &nbsp; | &nbsp; <%= @user.email %></h3>
+<p><strong>OS: </strong><%= @user.operating_system %></p>
 
 <hr style="background-color: #fff; border-top: 1px dashed #8c8b8b;"/>
-
-<p><strong>Id: </strong><%= @user.id %></p>
 
 <% if current_member %>
   <p><strong>Username </strong><%= current_member.username %>!</p>
   <p><strong>Password </strong><%= current_member.email %>!</p>
 <% end %>
 
-<p><strong>Phone: </strong><%= @user.phone %> | <strong>Zip: </strong><%= @user.zip_code %></p>
+<p>
+  <% if !@user.over_21 %>
+    <p><strong>Age: </strong><%= @user.age %></p>
+  <% else %>
+    <p>Over 21</p>
+  <% end %> | <strong>Phone: </strong><%= @user.phone %> | <strong>Zip: </strong><%= @user.zip_code %>
+</p>
 
 <p><strong>Twitter: </strong><%= @user.twitter_handle %> | <strong>Github: </strong><%= @user.github_user_name %></p>
 
-<p><strong>Over 21 ?: </strong><%= @user.over_21 %> | <strong>Age: </strong><%= @user.age %></p>
 
-<p><strong>OS: </strong><%= @user.operating_system %></p>
 
 <hr/>
 <div class="questions">
