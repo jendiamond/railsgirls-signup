@@ -1,23 +1,23 @@
 <div class="jumbotron">
   <p id="notice"><%= notice %></p>
-  <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %></strong></h2>
+  <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %> | Id: <%= @question.user_id %></strong></h2>
 
-  <h2>Id: <%= @question.user_id %></h2>
 <hr/>
   <p>
     <strong>Green: Yes / Red: No</strong>
+  <br/>
     <% if @question.bootcamp %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
     <% end %> | Attended Bootcamp
-<br/>
+  <br/>
     <% if @question.compsci %>
       <%= image_tag("green.png") %>
     <% else %>
      <%= image_tag("red.png") %>
     <% end %> | Studying CS
-<br/>
+  <br/>
     <% if @question.rlsgrl_rlsbrg %>
       <%= image_tag("green.png") %>
     <% else %>
@@ -34,7 +34,6 @@
   </p>
 
   <p>
-    <%= @question.html_css %>
     <% if @question.html_css %>
       <%= image_tag("green.png") %>
     <% else %>
@@ -86,15 +85,15 @@
 
 <hr/>
   <p>
-    <%= @question.continue %> | Will continue
+    Will continue<br/><%= @question.continue %>
   </p>
 
   <p>
-    <%= @question.support %> | Has support
+    Has support<br/><%= @question.support %>
   </p>
 
   <p>
-    <%= @question.support %> | Previous Experience
+    Previous Experience<br/><%= @question.support %>
   </p>
 
   <%= link_to 'Edit', edit_question_path(@question) %> |
