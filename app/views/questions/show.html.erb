@@ -2,56 +2,67 @@
   <p id="notice"><%= notice %></p>
   <h2>Name: <%= @user.first_name %> <%= @user.last_name %></h2>
   <h2>Id: <%= @question.user_id %> Rating:<%= @user.rating %></h2>
+
   <p>
-    <strong>Total newbie?:</strong>
+    <strong>Attended Bootcamp:</strong>
+    <% if @question.bootcamp %>
+      <%= image_tag("red.gif") %>
+    <% else %>
+     false
+    <% end %>
+
+    <strong>Studying CS:</strong>
+    <% if @question.compsci %>
+      <%= image_tag("red.gif") %>
+    <% else %>
+     false
+    <% end %>
+
+    <strong>Attended RailsGirls or Railsbridge:</strong>
+    <% if @question.rlsgrl_rlsbrg %>
+      <%= image_tag("red.gif") %>
+    <% else %>
+     false
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Newbie?:</strong>
     <%= @question.newbie %>
   </p>
 
   <p>
-    <strong>Familiar with HTML / CSS?:</strong>
+    <strong>HTML/CSS?:</strong>
     <%= @question.html_css %>
   </p>
 
   <p>
-    <strong>Online Ruby / Rails tutorials:</strong>
+    <strong>Tutorials:</strong>
     <%= @question.tutorials %>
   </p>
 
   <p>
-    <strong>Attend a Study Group?:</strong>
+    <strong>Study Group?:</strong>
     <%= @question.study_group %>
   </p>
 
   <p>
-    <strong>Have you ever written a program?:</strong>
+    <strong>Written a program?:</strong>
     <%= @question.program %>
   </p>
 
   <p>
-    <strong>Created and launched a website?:</strong>
+    <strong>Website?:</strong>
     <%= @question.website %>
   </p>
-
+<hr/>
   <p>
-    <strong>Do you work in the technical field?:</strong>
+    <strong>Work in the tech?:</strong>
     <%= @question.work %>
   </p>
 
-  <p>
-    <strong>Have you attended a bootcamp?:</strong>
-    <%= @question.bootcamp %>
-  </p>
 
-  <p>
-    <strong>Are you studying CS?:</strong>
-    <%= @question.compsci %>
-  </p>
-
-  <p>
-    <strong>Have you previously attended a Rails Girls or Railsbridge?:</strong>
-    <%= @question.rlsgrl_rlsbrg %>
-  </p>
-
+<hr/>
   <p>
     <strong>Do you think you will continue learning to program after the workshop?:</strong>
     <%= @question.continue %>
