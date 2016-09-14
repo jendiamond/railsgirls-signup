@@ -5,18 +5,16 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :email %>
-    <%= f.input :twitter %>
-    <%= f.input :github %>
-    <%= f.input :job %>
-    <%= f.input :student1 %>
-    <%= f.input :student2 %>
-    <%= f.input :attended_as_student %>
-    <%= f.input :coached_april_13 %>
-    <%= f.input :coached_march_14 %>
-    <%= f.input :coached_april_15 %>
-    <%= f.input :coached_august_15 %>
-    <%= f.input :coached_march_16 %>
-    <%= f.input :notes %>
+    <%= f.input :twitter, placeholder: "https://twitter.com/your-user-name", required: false %>
+    <%= f.input :github, placeholder: "https://github.com/your-user-name", required: false %>
+    <%= f.input :job, label: "Job / Position" %>
+    <%= f.input :attended_as_student, as: :radio_buttons %>
+    <%= f.input :coached_april_13, as: :radio_buttons %>
+    <%= f.input :coached_march_14, as: :radio_buttons %>
+    <%= f.input :coached_april_15, as: :radio_buttons %>
+    <%= f.input :coached_august_15, as: :radio_buttons %>
+    <%= f.input :coached_march_16, as: :radio_buttons %>
+    <%= f.input :notes, label: "Anything you want to add or ask. :)" %>
   </div>
 
   <div class="form-actions">
