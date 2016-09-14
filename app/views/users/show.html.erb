@@ -23,8 +23,122 @@
 
 <p><strong>OS: </strong><%= @user.operating_system %></p>
 
+<hr/>
+<div class="questions">
+  <p id="notice"><%= notice %></p>
+  <h2><strong>Name: <%= @user.first_name %> <%= @user.last_name %></strong></h2>
+
+  <h2>Id: <%= @question.user_id %></h2>
+
+  <p>
+    Red: Yes / Green: No
+    <br/>
+    Attended Bootcamp:
+    <% if @question.bootcamp %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+
+    Studying CS:</strong>
+    <% if @question.compsci %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+
+    Attended RailsGirls or Railsbridge:
+    <% if @question.rlsgrl_rlsbrg %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+<hr/>
+  <p>
+    Newbie?:
+    <% if @question.newbie %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+
+  <p>
+    HTML/CSS?:
+    <%= @question.html_css %>
+    <% if @question.html_css %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+
+  <p>
+    Tutorials:
+    <% if @question.tutorials %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+
+  <p>
+    <Study Group?:
+    <% if @question.study_group %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+
+  <p>
+    Written a program?:
+    <% if @question.program %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+
+  <p>
+    Website?:
+    <% if @question.website %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
+<hr/>
+  <p>
+    Work in tech?:
+    <% if @question.work %>
+      <%= image_tag("red.png") %>
+    <% else %>
+     <%= image_tag("green.png") %>
+    <% end %>
+  </p>
 
 
+<hr/>
+  <p>
+    <strong>Will continue?:</strong>
+    <%= @question.continue %>
+  </p>
+
+  <p>
+    <strong>Support?:</strong>
+    <%= @question.support %>
+  </p>
+
+  <p>
+    <strong>Previous Experience:</strong>
+    <%= @question.support %>
+  </p>
+
+  <%= link_to 'Edit', edit_question_path(@question) %> |
+  <%= link_to 'Back', questions_path %>
+</div>
 <hr/>
 
 <p><strong>Workshop: </strong><%= @user.workshop %></p>
