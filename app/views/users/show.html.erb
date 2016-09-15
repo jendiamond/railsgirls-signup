@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 <% if current_member %>
-  <h2>Hi <%= @user.first_name %> Your ID is: <%= @user.id %><br/>
-    Your user page is:</h2><h3> <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %> :)</a></h3>
+  <h2>Hi <%= @user.first_name %> Your ID is: <%= @user.id %></h2>
+    <h2>Your user page is:<br/>
+     <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %> :)</a></h2>
 
-  <h2><a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %>">Finish the rest of your tutorials.
+  <h2>Finish the rest of your tutorials if you haven't completed them yet.
   <br/>
   Your tutorial link is:</h2>
-  <h3>https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %> :)</a></h3>
+  <h3><a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %> :)</a></h3>
 
   <hr/>
     <h3>Your Completed Tutorials:</h3>
