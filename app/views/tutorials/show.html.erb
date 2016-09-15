@@ -1,4 +1,69 @@
 <div class="jumbotron">
+<% if @user.accepted %>
+<h3><b><%= @user.first_name.capitalize %></b>, you have passed the Second Level of acceptance
+and are an Official Rails Girl! :)</h3>
+  <%= image_tag("railsgirlsla.png") %>
+
+  ------------------ ------------------  ------------------  ------------------ 
+
+
+The full schedule for the weekend will be posted here 
+(but it’s not there yet): http://railsgirls.com/la#schedule
+Friday, March 18th 7pm - 10pm for the install-fest.
+Saturday, March 19th 9am-6pm for the Workshop.
+
+ ------------------ ------------------  ------------------  ------------------ 
+<h2>The Third Level</h2>
+
+<h2>The Install-fest on Friday March 18th</h2>
+
+<p>If you feel like trying to install Rails, et cetera, before the install-fest you can try it out but you still have to come to the install-fest to get it all checked. It really holds up the whole group and makes it hard on the coaches if you don’t come to the install-fest even if you think you are completely ready.</p>
+
+<strong>What follows below is not the entire process.<strong>
+<a href="http://guides.railsgirls.com/install/">http://guides.railsgirls.com/install/</a>
+
+<p>Windows users, it can be a huge pain in the butt.
+Don't worry, we will help you at install-fest.</p>
+
+<p>Again, If you are successful installing that does not mean you can skip the Friday night install-fest but it probably means it will be a shorter process for you to get checked in. :)</p>
+
+<h3>Here are a few other things you will need:</h3>
+<h3>Get a Text Editor</h3>
+<p>A text editor is what you will use to write your code. These are some of your options. Sublime is probably your best option to get started. It's Free too.
+(A real text editor won't add any extra code to what you write, like if you used a Word.doc. Read this to learn about text editors.)</p>
+  
+<h3>Some choices of Text Editors: </h3>
+<ul>
+  <li>Sublime</li>
+  <li>Komodo Edit</li>
+  <li>Gedit</li>
+  <li>Vim</li>
+  <li>Notepad++</li>
+  <li>Emacs</li>
+</ul>
+
+<h3>Install Git  http://git-scm.com/book</h3>
+<p>Git is your local version control. This means it saves a copy of what you have done so if you make a mistake you can go back.</p>
+ 
+<h3>Create a Github Account</h3>
+<p>GitHub is your remote version control. This means it saves a copy of what you have done in the cloud so if you make a mistake you can go back or if your computer blows up you will still have a copy of your work. Plus this is the way developers share code.</p>
+
+<h3>Create a Heroku Account</h3>
+<p>Heroku is where you will serve your website from so you can view it on the web.</p>
+ 
+<p>P.S. - Don't forget your usernames & passwords :)
+and be sure to add a photo to your GitHub profile.</p>
+
+ ------------------
+
+<h2>The Fourth Level</h2>
+<p>The Workshop on Saturday March 19th</p>
+ ------------------
+
+<h2>The Fifth Level</h2>
+<p>Coach at the next event. :)</p>
+ ------------------
+<% else %>
   <h2><b>Level 2 - Four Tutorials</b></h2>
   <h3><b><%= @user.first_name.capitalize %></b>, you have passed the first level of acceptance
 to become an official Rails Girl :)</h3>
@@ -7,10 +72,6 @@ to become an official Rails Girl :)</h3>
   <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %></a></h3>
 <h3>Your tutorial link is:<br/>
 <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %></a></h3>
-
-<% if @user.accepted %>
-  <%= image_tag("railsgirlsla.png") %>
-<% else %>
 
 <h2>The Second Level, if you choose to accept</h2>
 <p>is to complete the 4 tutorials below that will help you
