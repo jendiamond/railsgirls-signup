@@ -2,10 +2,10 @@
 <% if current_member %>
   Hi <%= @user.first_name %>
 
-  <h2><a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @tutorial.id %>">Finish your tutorials. :)</a></h2>
+  <h2><a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @tutorial.id %>">Finish the rest of your tutorials. :)</a></h2>
 
   <hr/>
-    <h3><strong>Tutorials</strong></h3>
+    <h3><strong>Your Completed Tutorials: </strong></h3>
     <% if @tutorial.try_ruby %>
       <%= image_tag "tryruby-success.png", width: '75' %>
     <% end %>
