@@ -1,17 +1,14 @@
 <div class="jumbotron">
 <% if @user.accepted %>
-<h3>Congratulations, <b><%= @user.first_name.capitalize %></b>, you have passed the Second Level of acceptance
+<h3><b>Congratulations, <%= @user.first_name.capitalize %></b>, you have passed the Second Level of acceptance
 and are an <strong>Official Rails Girl!</strong> :)</h3>
   <%= image_tag("rg-losangeles.png") %>
-
-  ------------------ ------------------  ------------------  ------------------ 
-
 
 <p><strong>The full schedule for the weekend is posted here: <a href="http://railsgirls.com/la#schedule">http://railsgirls.com/la#schedule</a></strong></p>
 <p>Friday, October 21st 7pm - 10pm for the install-fest.</p>
 <p>Saturday, October 22nd 9am-6pm for the Workshop.</p>
 
- ------------------ ------------------  ------------------  ------------------ 
+<hr/>
 <h2><strong>The Third Level</strong></h2>
 
 <h3>The Install-fest on Friday October  21st 7pm - 10pm</h3>
@@ -53,15 +50,18 @@ Don't worry, we will help you at install-fest.</strong></p>
 <p>P.S. - Don't forget your usernames & passwords :)
 and be sure to add a photo to your GitHub profile.</p>
 
- ------------------
+<hr/>
 
 <h2><strong>The Fourth Level</strong></h2>
 <h3>The Workshop on Saturday October 22nd</h3>
- ------------------
+
+<hr/>
 
 <h2><strong>The Fifth Level</strong></h2>
 <h3>Coach at the next event. :)</h3>
- ------------------
+
+<hr/>
+
 <% else %>
   <h2><b>Level 2 - Four Tutorials</b></h2>
   <h3><b><%= @user.first_name.capitalize %></b>, you have passed the first level of acceptance
