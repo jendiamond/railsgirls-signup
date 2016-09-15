@@ -1,5 +1,26 @@
 <p id="notice"><%= notice %></p>
+<% if current_member %>
+  Hi <%= @user.first_name %>
 
+  <h2><a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @tutorial.id %>">Finish your tutorials. :)</a></h2>
+
+  <hr/>
+    <h3><strong>Tutorials</strong></h3>
+    <% if @tutorial.try_ruby %>
+      <%= image_tag "tryruby-success.png", width: '75' %>
+    <% end %>
+    <% if @tutorial.try_git %>
+      <%= image_tag "trygit-success.jpg", width: '75' %>
+    <% end %>
+      <% if @tutorial.terminal %>
+      <%= image_tag "terminal-success.jpg", width: '75' %>
+    <% end %>
+    <% if @tutorial.html_css %>
+      <%= image_tag "htmlcss-success.jpg", width: '75' %>
+    <% end %>
+  <hr/>
+
+<% else %>
 <h3><strong>Id: </strong><%= @user.id %> | <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'You sure?' } %> |
 <%= link_to 'Back', users_path %></h3>
 
@@ -27,13 +48,13 @@
 <h3><strong>Tutorials</strong></h3>
   <% if @tutorial.try_ruby %>
     <%= image_tag "tryruby-success.png", width: '75' %>
-  <% end %> 
+  <% end %>
   <% if @tutorial.try_git %>
     <%= image_tag "trygit-success.jpg", width: '75' %>
   <% end %>
     <% if @tutorial.terminal %>
     <%= image_tag "terminal-success.jpg", width: '75' %>
-  <% end %> 
+  <% end %>
   <% if @tutorial.html_css %>
     <%= image_tag "htmlcss-success.jpg", width: '75' %>
   <% end %>
@@ -134,3 +155,4 @@
 <p><strong>Attended: </strong><%= @user.attended %></p>
 
 <p><strong>Phase five coach: </strong><%= @user.phase_five_coach %></p>
+<% end %>
