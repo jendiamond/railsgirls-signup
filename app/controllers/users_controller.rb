@@ -9,8 +9,8 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    @question = Question.find_by(user_id:(@user.id))
-    @tutorial = Tutorial.find_by(user_id:(@user.id))
+    @question = Question.find_by user_id:(@user.id)
+    @tutorial = Tutorial.find_by user_id:(@user.id)
   end
 
   # GET /users/new
