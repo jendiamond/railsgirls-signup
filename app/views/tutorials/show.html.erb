@@ -8,6 +8,10 @@ to become an official Rails Girl :)</h3>
 <h3>Your tutorial link is:<br/>
 <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>/tutorials/<%= @user.id %></a></h3>
 
+<% if @user.accepted %>
+  <%= image_tag @tutorial.railsgirlsla.png %>
+<% else %>
+
 <h2>The Second Level, if you choose to accept</h2>
 <p>is to complete the 4 tutorials below that will help you
 get the most out of the Rails Girls workshop and determine your acceptance.
@@ -179,8 +183,11 @@ There will be a coach training session.
 
   </div>
 </div>
+
+<% else %>
+
 <hr/>
 
   </div>
-  <%#= link_to 'Back', user_tutorials_path(@user) %>
+  <%#= link_to 'Your Page', user_tutorials_path(@user) %>
 </div>
