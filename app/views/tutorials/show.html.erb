@@ -130,9 +130,9 @@ There will be a coach training session.
             <%= image_tag "tryruby-success.png" %>
         <% else %>
         <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
-        Type next to start.
-        <h4>Upload a screenshot of the last page you complete.</h4>
-        <p>This should be the last page of the tutorial. :)</p>
+          Type next to start.
+          <h4>Upload a screenshot of the last page you complete.</h4>
+          <p>This should be the last page of the tutorial. :)</p>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
@@ -147,21 +147,18 @@ There will be a coach training session.
             <%= image_tag @tutorial.tryruby_image.url(:medium,) %>
           <% end %>
 
-          
-          <% end %>
+        <% end %>
       </p>
     </div>
-  </div>
-  <div>
-    <% if @user.accepted %>
-     <h3>Fantastic! You have passed the Serpent Level. </h3>
-            <%= image_tag "htmlcss-success.jpg" %>
-          <% end %>
   </div>
 
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
+        <% if @user.try_git %>
+          <h3> Awesome! You have passed the Octocat Level.  </h3>
+          <%= image_tag ""trygit-success.jpg" %>
+        <% else %>
         <%= image_tag "octocat.png" %> 2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
         Write down all the git commands you learned.
         <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
@@ -183,6 +180,7 @@ There will be a coach training session.
             <h3> Awesome! You have passed the Octocat Level.</h3>
             <%= image_tag "trygit-success.jpg" %>
           <% end %>
+        <% end %>
       </p>
     </div>
   </div>
