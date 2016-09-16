@@ -127,7 +127,7 @@ There will be a coach training session.
       <p>
         <% if @tutorial.try_ruby %>
             <h3><%= image_tag("unlock.png") %> Sweet! You have passed the Fox Level.</h3>
-            <%= image_tag "tryruby-success.png" %>
+            <%= image_tag("tryruby-success.png") %>
         <% else %>
           <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
           Type next to start.
@@ -146,7 +146,6 @@ There will be a coach training session.
           <% if @tutorial.missing_image?(@tutorial.tryruby_image).nil? %>
             <%= image_tag @tutorial.tryruby_image.url(:medium,) %>
           <% end %>
-
         <% end %>
       </p>
     </div>
@@ -155,7 +154,7 @@ There will be a coach training session.
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
-        <% if @tutorial..try_git %>
+        <% if @tutorial.try_git %>
           <h3><%= image_tag("unlock.png") %> Awesome! You have passed the Octocat Level.</h3>
           <%= image_tag("trygit-success.jpg") %>
         <% else %>
@@ -189,7 +188,8 @@ There will be a coach training session.
         <% else %>
           <%= image_tag("clover.gif") %> 3. <a href="https://speakerdeck.com/jendiamond/the-terminal-know-your-command-line-an-introduction">The Terminal slide show</a>
           
-          Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.<br/>If you are on Windows these commands are a bit different. Find out what the equivalent commands are.
+          Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.<br/><br/>
+          If you are on Windows these commands are a bit different. Find out what the equivalent commands are.
           <h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
@@ -214,7 +214,7 @@ There will be a coach training session.
       <p>
         <% if @tutorial.html_css %>
             <h3><%= image_tag("unlock.png") %> Fantastic! You have passed the Serpent Level.</h3>
-            <%= image_tag "htmlcss-success.jpg" %>
+            <%= image_tag("htmlcss-success.jpg") %>
         <% else %>
           <%= image_tag("snake.png") %>4. <a href="https://dash.generalassemb.ly/">Learn to Make Awesome Websites</a> (Only the first one.)
 
@@ -236,9 +236,6 @@ There will be a coach training session.
         <% end %>
       </p>
     </div>
-  </div>
-  <div>
-
   </div>
 </div>
 
