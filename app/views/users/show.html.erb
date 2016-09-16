@@ -47,7 +47,7 @@
   <% end %> | <strong>Phone: </strong><%= @user.phone %> | <strong>Zip: </strong><%= @user.zip_code %>
 </p>
 
-<p><strong>Twitter: </strong><%= @user.twitter_handle %> | <strong>Github: </strong><%= @user.github_user_name %></p>
+<p><strong>Twitter: </strong><a href="<%= @user.twitter_handle %>"><%= @user.twitter_handle %></a> | <strong>Github: </strong><a href="<%= @user.github_user_name %>"><%= @user.github_user_name %></a></p>
 
 <hr/>
 <h3><strong>Tutorials</strong></h3>
