@@ -1,6 +1,6 @@
 <div class="jumbotron">
 <% if @user.accepted %>
-<h2><b>Congratulations, <%= @user.first_name.capitalize %></b>,</h2>
+<h2><b><%= image_tag("heart-key.png") %>Congratulations, <%= @user.first_name.capitalize %></b>,</h2>
 <h3> you have passed the Second Level of acceptance
 and are an <strong>Official Rails Girl!</strong> :)</h3>
   <%= image_tag("rg-losangeles.png") %>
@@ -125,6 +125,10 @@ There will be a coach training session.
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
+        <% if @tutorial.try_ruby %>
+            <h3><%= image_tag("unlock.png") %>Sweet! You have passed the Fox Level.</h3>
+            <%= image_tag "tryruby-success.png" %>
+        <% else %>
         <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
         Type next to start.
         <h4>Upload a screenshot of the last page you complete.</h4>
@@ -143,9 +147,7 @@ There will be a coach training session.
             <%= image_tag @tutorial.tryruby_image.url(:medium,) %>
           <% end %>
 
-          <% if @tutorial.try_ruby %>
-            <h3>Sweet! You have passed the Fox Level.</h3>
-            <%= image_tag "tryruby-success.png" %>
+          
           <% end %>
       </p>
     </div>
