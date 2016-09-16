@@ -126,10 +126,10 @@ There will be a coach training session.
     <div style="background-color:#ccc09e; padding:10px">
       <p>
         <% if @tutorial.try_ruby %>
-            <h3><%= image_tag("unlock.png") %>Sweet! You have passed the Fox Level.</h3>
+            <h3><%= image_tag("unlock.png") %> Sweet! You have passed the Fox Level.</h3>
             <%= image_tag "tryruby-success.png" %>
         <% else %>
-        <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
+          <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
           Type next to start.
           <h4>Upload a screenshot of the last page you complete.</h4>
           <p>This should be the last page of the tutorial. :)</p>
@@ -155,13 +155,13 @@ There will be a coach training session.
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
-        <% if @user.try_git %>
-          <h3> Awesome! You have passed the Octocat Level.  </h3>
-          <%= image_tag ""trygit-success.jpg" %>
+        <% if @tutorial..try_git %>
+          <h3><%= image_tag("unlock.png") %> Awesome! You have passed the Octocat Level.</h3>
+          <%= image_tag("trygit-success.jpg") %>
         <% else %>
-        <%= image_tag "octocat.png" %> 2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
-        Write down all the git commands you learned.
-        <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
+          <%= image_tag "octocat.png" %> 2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
+          Write down all the git commands you learned.
+          <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
@@ -175,11 +175,6 @@ There will be a coach training session.
           <% if @tutorial.missing_image?(@tutorial.trygit_image).nil? %>
             <%= image_tag @tutorial.trygit_image.url(:medium,) %>
           <% end %>
-
-          <% if @tutorial.try_git %>
-            <h3> Awesome! You have passed the Octocat Level.</h3>
-            <%= image_tag "trygit-success.jpg" %>
-          <% end %>
         <% end %>
       </p>
     </div>
@@ -188,10 +183,14 @@ There will be a coach training session.
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
-        <%= image_tag("clover.gif") %> 3. <a href="https://speakerdeck.com/jendiamond/the-terminal-know-your-command-line-an-introduction">The Terminal slide show</a>
-        
-        Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.
-        <h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
+        <% if @tutorial.terminal %>
+          <h3><%= image_tag("unlock.png") %> Hooray! You have passed the CloverLevel.</h3>
+          <%= image_tag("terminal-success.jpg") %>
+        <% else %>
+          <%= image_tag("clover.gif") %> 3. <a href="https://speakerdeck.com/jendiamond/the-terminal-know-your-command-line-an-introduction">The Terminal slide show</a>
+          
+          Write down all the commands you learned. Even if you are not quite sure how to use them. The goal is to start getting familiar with hearing the words and have a basic understanding of what they do.<br/>If you are on Windows these commands are a bit different. Find out what the equivalent commands are.
+          <h4>Upload a list of all the commands you learned and a brief description of what they do.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
@@ -205,11 +204,7 @@ There will be a coach training session.
           <% if @tutorial.missing_image?(@tutorial.terminal_image).nil? %>
             <%= image_tag @tutorial.terminal_image.url(:medium,) %>
           <% end %>
-
-          <% if @tutorial.terminal %>
-            <h3>Hooray! You have passed the CloverLevel.</h3>
-            <%= image_tag "terminal-success.jpg" %>
-          <% end %>
+        <% end %>
       </p>
     </div>
   </div>
@@ -217,10 +212,14 @@ There will be a coach training session.
   <div style="background-color:#fff; padding:5px; margin 2px">
     <div style="background-color:#ccc09e; padding:10px">
       <p>
-        <%= image_tag("snake.png") %>4. <a href="https://dash.generalassemb.ly/">Learn to Make Awesome Websites</a> (Only the first one.)
-        
-        You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from GA. You can unsubscribe once they start sending it.
-        <h4>Upload a screenshot of the last page you complete.</h4>
+        <% if @tutorial.html_css %>
+            <h3><%= image_tag("unlock.png") %> Fantastic! You have passed the Serpent Level.</h3>
+            <%= image_tag "htmlcss-success.jpg" %>
+        <% else %>
+          <%= image_tag("snake.png") %>4. <a href="https://dash.generalassemb.ly/">Learn to Make Awesome Websites</a> (Only the first one.)
+
+          You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from GA. You can unsubscribe once they start sending it.
+          <h4>Upload a screenshot of the last page you complete.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
@@ -234,11 +233,7 @@ There will be a coach training session.
           <% if @tutorial.missing_image?(@tutorial.htmlcss_image).nil? %>
             <%= image_tag @tutorial.htmlcss_image.url(:medium,) %>
           <% end %>
-
-          <% if @tutorial.html_css %>
-            <h3>Fantastic! You have passed the Serpent Level. </h3>
-            <%= image_tag "htmlcss-success.jpg" %>
-          <% end %>
+        <% end %>
       </p>
     </div>
   </div>
