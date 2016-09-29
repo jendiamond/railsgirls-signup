@@ -5,6 +5,7 @@
   <table style="background-color:#8a9e98">
     <thead>
       <tr>
+        <th>Status</th>
         <th>Id</th>
         <th>Name</th>
         <th>Email</th>
@@ -23,17 +24,18 @@
       <% @users.each do |user| %>
         <% if user.cancellation %>
           <tr>
+            <td style="width:100px">CANCELLED</td>
             <td style="width:20px"><%= user.id %></td>
             <td style="width:200px"><%= user.first_name %> <%= user.last_name %></td>
             <td style="width:150px"><%= user.email %></td>
-            <td style="width:100px">CANCELLED</td>
           </tr>
         <% elsif user.accepted %>
           <tr>
+            <td style="width:100px">ACCEPTED</td>
             <td style="width:20px"><%= user.id %></td>
             <td style="width:200px"><%= user.first_name %> <%= user.last_name %></td>
             <td style="width:150px"><%= user.email %></td>
-            <td style="width:100px">ACCEPTED</td>
+            <td style="width:100px"><%= user.phone %></td>
             <td style="width:50px"><%= user.zip_code %></td>
             <td style="width:100px"><%= link_to user.twitter_handle, user.twitter_handle %></td>
             <td style="width:100px"><%= link_to user.github_user_name, user.github_user_name %></td>
@@ -46,6 +48,7 @@
           </tr>
         <% else %>
           <tr>
+            <td style="width:100px">PENDING</td>
             <td style="width:20px"><%= user.id %></td>
             <td style="width:200px"><%= user.first_name %> <%= user.last_name %></td>
             <td style="width:150px"><%= user.email %></td>
