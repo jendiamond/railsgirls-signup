@@ -28,7 +28,7 @@
             <td style="width:150px"><%= user.email %></td>
             <td style="width:100px">CANCELLED</td>
           </tr>
-        <% elsif user.cancellation %>
+        <% elsif user.accepted %>
           <tr>
             <td style="width:20px"><%= user.id %></td>
             <td style="width:200px"><%= user.first_name %> <%= user.last_name %></td>
