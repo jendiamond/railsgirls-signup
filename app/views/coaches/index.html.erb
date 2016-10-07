@@ -14,6 +14,12 @@
       <th>Job</th>
       <th>Student1</th>
       <th>Student2</th>
+      <th>Past student</th>
+      <th>4-2013</th>
+      <th>3-2014</th>
+      <th>4-2015</th>
+      <th>8-2015</th>
+      <th>3-2016</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,6 +35,12 @@
         <td><%= coach.job %></td>
         <td><%= coach.student1 %></td>
         <td><%= coach.student2 %></td>
+        <td><%= coach.attended_as_student %></td>
+        <td><%= coach.coached_april_13 %></td>
+        <td><%= coach.coached_march_14 %></td>
+        <td><%= coach.coached_april_15 %></td>
+        <td><%= coach.coached_august_15 %></td>
+        <td><%= coach.coached_march_16 %></td>
         <td><%= link_to 'Show', coach %></td>
         <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
         <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>

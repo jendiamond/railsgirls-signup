@@ -49,6 +49,35 @@
 </p>
 
 <p>
+  <% if @coach.attended_as_student %>
+    <%= image_tag("green.png") %> Attended as student
+  <% end %>
+</p>
+
+<p><strong>Coached at:</strong>
+  <br/>
+  <% if @coach.coach_april_13_pivotal %>
+    <%= image_tag("green.png") %> Pivotal April 2013<br/>
+  <% end %>
+
+  <% if @coach.coach_march_14_invpasadena %>
+    <%= image_tag("green.png") %> Innovate Pasadena March 2014<br/>
+  <% end %>
+
+  <% if @coach.coach_april_15_pivotal %>
+    <%= image_tag("green.png") %> Pivotal April 2015<br/>
+  <% end %>
+
+  <% if @coach.coach_august_15_spokeo %>
+    <%= image_tag("green.png") %> Spokeo / Innovate Pasadena August 2015<br/>
+  <% end %>
+
+  <% if @coach.coach_march_16_zest %>
+    <%= image_tag("green.png") %> Zest Finance March 2016
+  <% end %>
+</p>
+
+<p>
   <strong>Notes:</strong>
   <%= @coach.notes %>
 </p>
