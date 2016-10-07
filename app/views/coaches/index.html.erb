@@ -1,7 +1,6 @@
-<div style="background-color:#ccc09e; padding:10px">
-<p id="notice"><%= notice %></p>
 
-<h2><%= @coaches.count %>&nbsp;Coaches October 2016</h2>
+<h2 style="background-color:#ccc09e; padding:10px"><%= @coaches.count %>&nbsp;Coaches October 2016 | <%= link_to 'New Coach', new_coach_path %></h2>
+<p id="notice"><%= notice %></p>
 
 <table style="background-color:#8a9e98">
   <thead>
@@ -50,8 +49,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Coach', new_coach_path %>
-</div>
