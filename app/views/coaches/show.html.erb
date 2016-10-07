@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h2>
-  <strong><%= @coach.first_name %> <%= @coach.last_name %></strong>
+  <strong><%= @coach.first_name.downcase.capitalize %> <%= @coach.last_name.downcase.capitalize %></strong>
 </h2>
-
+<hr/>
 <p>
+  <strong>Operating System:</strong>
   <%= @coach.operating_system %>
-  <% if @coach.spokeo %>
+  <% if @coach.work_at_sponsoring_company %>
     &nbsp;|&nbsp;Works at Spokeo. :)
   <% end %>
 </p>
@@ -14,27 +15,40 @@
 <p>
   <strong>Days available:</strong>
   <%= @coach.days %>
-  <% if @coach.student1 && @coach.student2 %>
+</p>
+
+<p>
+  <% if @coach.student1.present? && @coach.student2.present? %>
     <strong>&nbsp;|&nbsp;Students:</strong>
     <%= @coach.student1 %> | <%= @coach.student2 %>
   <% end %>
 </p>
 
 <p>
-  <%= @coach.email %> | <%= @coach.phone %>
+  <% if @coach.email.present? %>
+    <%= @coach.email %>
+  <% end %>
+  <% if @coach.phone.present? %>
+    &nbsp;|&nbsp;<%= @coach.phone %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Twitter: </strong><%= @coach.twitter %> | <strong>Github: </strong>
-  <%= @coach.github %>
+  <% if @coach.twitter.present? %>
+    <strong>Twitter: </strong><%= @coach.twitter %>
+  <% end %>
+  <% if @coach.github.present? %>
+    &nbsp;|&nbsp;<strong>Github: </strong><%= @coach.github %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Job Title, Company:</strong>
-  <%= @coach.job %>
+  <% if @coach.job.present? %>
+    <strong>Job Title, Company:</strong>&nbsp;<%= @coach.job %>
+  <% end %>
 </p>
 
-<p>
+<!-- <p>
   <% if @coach.attended_as_student %>
     <%= image_tag("green.png") %> Attended as student
   <% end %>
@@ -42,26 +56,26 @@
 
 <p><strong>Coached at:</strong>
   <br/>
-  <% if @coach.coached_april_13 %>
-    <%= image_tag("green.png") %> Pivotal April 2013
+  <% if @coach.coach_april_13_pivotal %>
+    <%= image_tag("green.png") %> Pivotal April 2013<br/>
   <% end %>
-<br/>
-  <% if @coach.coached_march_14 %>
-    <%= image_tag("green.png") %> Innovate Pasadena March 2014
+
+  <% if @coach.coach_march_14_invpasadena %>
+    <%= image_tag("green.png") %> Innovate Pasadena March 2014<br/>
   <% end %>
-<br/>
-  <% if @coach.coached_april_15 %>
-    <%= image_tag("green.png") %> Pivotal April 2015
+
+  <% if @coach.coach_april_15_pivotal %>
+    <%= image_tag("green.png") %> Pivotal April 2015<br/>
   <% end %>
-<br/>
-  <% if @coach.coached_august_15 %>
-    <%= image_tag("green.png") %> Spokeo August 2015
+
+  <% if @coach.coach_august_15_spokeo %>
+    <%= image_tag("green.png") %> Spokeo / Innovate Pasadena August 2015<br/>
   <% end %>
-<br/>
-  <% if @coach.coached_march_16 %>
+
+  <% if @coach.coach_march_16_zest %>
     <%= image_tag("green.png") %> Zest Finance March 2016
   <% end %>
-</p>
+</p> -->
 <p>
   <strong>Notes:</strong>
   <%= @coach.notes %>
