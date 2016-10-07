@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929063955) do
+ActiveRecord::Schema.define(version: 20161007055452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,12 +38,18 @@ ActiveRecord::Schema.define(version: 20160929063955) do
     t.string   "coached_august_15"
     t.string   "coached_march_16"
     t.text     "notes"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "days"
     t.string   "operating_system"
     t.string   "phone"
     t.string   "spokeo"
+    t.boolean  "coach_april_13_pivotal"
+    t.boolean  "coach_march_14_invpasadena"
+    t.boolean  "coach_april_15_pivotal"
+    t.boolean  "coach_august_15_spokeo"
+    t.boolean  "coach_march_16_zest"
+    t.boolean  "work_at_sponsoring_company"
   end
 
   create_table "members", force: :cascade do |t|
@@ -140,6 +146,7 @@ ActiveRecord::Schema.define(version: 20160929063955) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.boolean  "cancellation"
+    t.string   "status"
   end
 
   add_foreign_key "tutorials", "users"
