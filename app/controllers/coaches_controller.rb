@@ -56,6 +56,8 @@ class CoachesController < ApplicationController
       params.require(:coach).permit(:first_name, :last_name, :email, :twitter, 
         :github, :job, :student1, :student2, :attended_as_student, :coached_april_13, 
         :coached_march_14, :coached_april_15, :coached_august_15, :coached_march_16, :notes,
-        :days, :operating_system, :phone, :spokeo)
+        :days, :operating_system, :phone, :spokeo, :coach_april_13_pivotal,
+        :coach_march_14_invpasadena, :coach_april_15_pivotal, :coach_august_15_spokeo,
+        :coaches, :coach_march_16_zest, :work_at_sponsoring_company)
     end
 end
