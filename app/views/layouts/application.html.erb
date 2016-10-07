@@ -16,9 +16,13 @@
 
     <div class="container">
       <div><%= render '/layouts/nav' %></div>
+      <% if current_page?(coaches_path) || current_page?(users_path)%>
+        <%= yield %>
+      <% else %>
         <div class="jumbotron">
           <%= yield %>
         </div>
+      <% end %>
       </div>
       <div class="row"style="text-align:center">
         <div><%= render '/layouts/footer' %></div>
