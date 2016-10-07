@@ -2,7 +2,15 @@
 
 <h2>
   <strong><%= @coach.first_name.downcase.capitalize %> <%= @coach.last_name.downcase.capitalize %></strong>
-</h2>
+  </h2>
+  <h3>
+    <% if @coach.email.present? %>
+    <%= @coach.email %>
+  <% end %>
+  <% if @coach.phone.present? %>
+    &nbsp;|&nbsp;<%= @coach.phone %>
+  <% end %>
+</h3>
 <hr/>
 <p>
   <strong>Operating System:</strong>
@@ -19,19 +27,12 @@
 
 <p>
   <% if @coach.student1.present? && @coach.student2.present? %>
-    <strong>&nbsp;|&nbsp;Students:</strong>
-    <%= @coach.student1 %> | <%= @coach.student2 %>
+    <strong>Students:</strong>
+    <%= @coach.student1 %> & <%= @coach.student2 %>
   <% end %>
 </p>
 
-<p>
-  <% if @coach.email.present? %>
-    <%= @coach.email %>
-  <% end %>
-  <% if @coach.phone.present? %>
-    &nbsp;|&nbsp;<%= @coach.phone %>
-  <% end %>
-</p>
+<hr/>
 
 <p>
   <% if @coach.twitter.present? %>
@@ -82,5 +83,7 @@
   <%= @coach.notes %>
 </p>
 
-<%= link_to 'Edit', edit_coach_path(@coach) %> |
-<%= link_to 'Back', coaches_path %>
+<hr/>
+
+<h3><%= link_to 'Edit', edit_coach_path(@coach) %> |
+<%= link_to 'Back', coaches_path %></h3>
