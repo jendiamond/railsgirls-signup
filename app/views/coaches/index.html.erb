@@ -5,6 +5,7 @@
 <table style="background-color:#8a9e98">
   <thead>
     <tr>
+      <th>Id</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Email</th>
@@ -27,6 +28,7 @@
   <tbody>
     <% @coaches.each do |coach| %>
       <tr>
+        <td><%= coach.id %></td>
         <td><%= coach.first_name %></td>
         <td><%= coach.last_name %></td>
         <td><%= coach.email %></td>
