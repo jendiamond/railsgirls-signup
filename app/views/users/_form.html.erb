@@ -26,11 +26,12 @@
     <%= f.input :over_21, required: true , as: :radio_buttons%>
     <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
     <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], required: true, as: :radio_buttons %>
+    <%= f.input :cancellation, as: :radio_buttons %>
     <%= f.simple_fields_for :question do |q| %>
       <%= q.input :newbie, label: "I am a total newbie :)", required: true, as: :radio_buttons %>
       <%= q.input :html_css, label: "I am familiar with HTML / CSS", required: true, as: :radio_buttons %>
       <%= q.input :tutorials, label: "I have done online Ruby / Rails tutorials", required: true, as: :radio_buttons %>
-      <%= q.input :study_group, label: "I attend a Study Group" %>
+      <%= q.input :study_group, label: "I attend a Study Group", required: true, as: :radio_buttons %>
       <%= q.input :program, label: "I have written a program (any language)", required: true, as: :radio_buttons %>
       <%= q.input :website, label: "I have created a website and launched it on the web", required: true, as: :radio_buttons %>
       <%= q.input :work, label: "I currently work in tech", required: true, as: :radio_buttons %>
