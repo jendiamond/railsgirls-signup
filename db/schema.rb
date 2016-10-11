@@ -146,7 +146,6 @@ ActiveRecord::Schema.define(version: 20161007055452) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.boolean  "cancellation"
-    t.string   "status"
   end
 
   add_foreign_key "tutorials", "users"
