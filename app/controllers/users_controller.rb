@@ -76,13 +76,6 @@ class UsersController < ApplicationController
         :attended, :phase_five_coach, :cancellation, :status,
           :question_attributes => [:newbie,:html_css,:tutorials,:study_group,
             :program,:website,:work,:bootcamp,:compsci,:rlsgrl_rlsbrg,
-            :continue,:support,:experience]
-          :tutorial_attributes => [:try_ruby:terminal,:try_git,:html_css,
-            :user_id,:created_at,:updated_at,
-            :image_file_name,:image_updated_at,
-            :tryruby_image_file_name,:tryruby_image_updated_at,
-            :terminal_image_file_name,:terminal_image_updated_at,
-            :trygit_image_file_name,:trygit_image_updated_at,
-            :htmlcss_image_file_name,:htmlcss_image_updated_at])
+            :continue,:support,:experience])
     end
 end
