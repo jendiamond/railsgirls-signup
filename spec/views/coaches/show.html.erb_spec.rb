@@ -1,23 +1,25 @@
 require 'rails_helper'
 
-RSpec.describe "coaches/show", type: :view do
+RSpec.describe "coaches/edit", type: :view do
   before(:each) do
     @coach = assign(:coach, Coach.create!(
-      :first_name => "First Name",
-      :last_name => "Last Name",
-      :email => "Email",
-      :twitter => "Twitter",
-      :github => "Github",
-      :job => "Job",
-      :student1 => "Student1",
-      :student2 => "Student2",
+      :first_name => "Pikku",
+      :last_name => "Pie",
+      :email => "pikkupie@gmail.com",
+      :twitter => "https://twitter.com/",
+      :github => "https://github.com/",
+      :job => "bug killer",
+      :student1 => "Hamster",
+      :student2 => "Santa",
       :attended_as_student => false,
-      :coached_april_13 => "Coached April 13",
-      :coached_march_14 => "Coached March 14",
-      :coached_april_15 => "Coached April 15",
-      :coached_august_15 => "Coached August 15",
-      :coached_march_16 => "Coached March 16",
-      :notes => "MyText"
+      :coach_april_13_pivotal => true,
+      :coach_march_14_invpasadena => true,
+      :coach_april_15_pivotal => true,
+      :coach_august_15_spokeo => true,
+      :coach_march_16_zest => true,
+      :work_at_sponsoring_company => true,
+      :notes => "Last time I coached a cockroach and a mouse. 
+                 Before I ate them they finished their apps."
     ))
   end
 

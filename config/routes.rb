@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'
+  get 'users/accepted'
+  get 'users/pending'
   root 'static_pages#home'
   resources :users do
     resources :tutorials, only: [:show, :update, :index]

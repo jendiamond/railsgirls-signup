@@ -204,3 +204,10 @@ background-color: $bgDefault;
 //http://work.smarchal.com/twbscolor/scss/857f6eccc09eccc09ef7f2f20
 
 //http://cache2.asset-cache.net/gc/165558706-circuit-board-vector-seamless-tile-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=5FYT8MJhDhE4ib2nzioBeA3pidenBbJav5iO5jwbqh0%3D
+
+@media screen and (min-width: 768px){
+.jumbotron {
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+}

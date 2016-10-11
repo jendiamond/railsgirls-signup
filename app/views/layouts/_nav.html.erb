@@ -14,15 +14,13 @@
           <li role="presentation"><%= link_to 'FAQ', static_pages_faq_path %></a></li>
           <li role="presentation"><%= link_to 'About', static_pages_about_path %></li>
           <li role="presentation"><%= link_to 'Apply', new_user_path %></li>
-          <div class=" nav navbar-nav pull-right user-info">
-            <% if current_member %>
-              <li role="presentation">Hello <%= current_member.email %>!</li>
-              <li><%= link_to "Sign out", destroy_member_session_path, method: :delete %></li>
-            <% else %></li>
-              <li role="presentation"><%= link_to "Sign In", new_member_session_path %></li>
-              <li role="presentation"><%= link_to "Sign Up", new_member_registration_path %></li>
-            <% end %>
-        </div>
+          <% if current_member %>
+            <li role="presentation" style="padding: 15px;color: #ccc09e"><b>Hello <%= current_member.email %> !</b></li>
+            <li><%= link_to "Sign out", destroy_member_session_path, method: :delete %></li>
+          <% else %></li>
+            <li role="presentation"><%= link_to "Sign In", new_member_session_path %></li>
+            <li role="presentation"><%= link_to "Sign Up", new_member_registration_path %></li>
+          <% end %>
         </ul>
 <!--         <form action="" class="navbar-form navbar-left" role="search">
           <div class="form-group">

@@ -49,7 +49,14 @@ class UsersController < ApplicationController
     redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
-  def pairings
+ # GET /users/accepted
+  def accepted
+    @users = User.all
+    @tutorials = Tutorial.all
+  end
+
+ # GET /users/pending
+  def pending
     @users = User.all
     @tutorials = Tutorial.all
   end
@@ -58,6 +65,7 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+      @tutorial = Tutorial.find(params[:user_id])
     end
 
     # Only allow a trusted parameter "white list" through.
@@ -67,7 +75,14 @@ class UsersController < ApplicationController
         :operating_system, :workshop, :rating, :coach, :pair, :accepted,
         :attended, :phase_five_coach, :cancellation, :status,
           :question_attributes => [:newbie,:html_css,:tutorials,:study_group,
-          :program,:website,:work,:bootcamp,:compsci,:rlsgrl_rlsbrg,
-          :continue,:support,:experience])
+            :program,:website,:work,:bootcamp,:compsci,:rlsgrl_rlsbrg,
+            :continue,:support,:experience]
+          :tutorial_attributes => [:try_ruby:terminal,:try_git,:html_css,
+            :user_id,:created_at,:updated_at,
+            :image_file_name,:image_updated_at,
+            :tryruby_image_file_name,:tryruby_image_updated_at,
+            :terminal_image_file_name,:terminal_image_updated_at,
+            :trygit_image_file_name,:trygit_image_updated_at,
+            :htmlcss_image_file_name,:htmlcss_image_updated_at])
     end
 end
