@@ -27,6 +27,7 @@
     <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
     <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], required: true, as: :radio_buttons %>
     <%= f.input :cancellation, as: :radio_buttons %>
+    
     <%= f.simple_fields_for :question do |q| %>
       <%= q.input :newbie, label: "I am a total newbie :)", required: true, as: :radio_buttons %>
       <%= q.input :html_css, label: "I am familiar with HTML / CSS", required: true, as: :radio_buttons %>
