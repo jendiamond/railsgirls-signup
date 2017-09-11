@@ -1,3 +1,5 @@
+require Rails.root.join("config/smtp_settings")
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -26,8 +28,14 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = SMTP_SETTINGS
+  config.action_mailer.default_options = {
+    from: "info@railsgirls-signup.herokuapp.com",
+    host: "localhost:3000"
+  }
 
   config.action_mailer.perform_caching = false
 
