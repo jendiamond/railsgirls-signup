@@ -28,15 +28,6 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = SMTP_SETTINGS
-  config.action_mailer.default_options = {
-    from: "info@railsgirls-signup.herokuapp.com",
-    host: "localhost:3000"
-  }
-
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -67,10 +58,10 @@ Rails.application.configure do
 
 
   config.action_mailer.default_url_options = { host: '33.33.33.33', port: 3000 }
-  config.action_mailer.delivery_method = :smtp 
+  config.action_mailer.default_options = { from: "info@railsgirls-signup.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
-  ActionMailer::Base.smtp_settings = { :address => "smtp.gmail.com", :port => 587, :authentication => :plain, :domain => 'gmail.com', :username => 'membername@gmail.com', :password => 'secret' }
-
+  config.action_mailer.smtp_settings = SMTP_SETTINGS
 end

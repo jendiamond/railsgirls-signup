@@ -63,10 +63,8 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_options = {
-    from: "info@railsgirls-signup.herokuapp.com",
-    host: 'railsgirls-signup.herokuapp.com'
-  }
+  config.action_mailer.default_options = { from: "info@railsgirls-signup.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: 'railsgirls-signup.herokuapp.com'}
 
   config.action_mailer.smtp_settings = SMTP_SETTINGS
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
