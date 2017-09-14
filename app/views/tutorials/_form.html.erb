@@ -5,6 +5,7 @@
 
     <div class="form-inputs">
       <%= f.file_field :tryruby_image, label: "Try Ruby" %>
+      <%= cl_image_tag("#{@tutorial.trygit_image_id}.jpg") %>
       <%= f.file_field :terminal_image, label: "Terminal" %>
       <%= f.file_field :trygit_image, label: "Try Git" %>
       <%= f.file_field :htmlcss_image, label: "HTML & CSS" %>

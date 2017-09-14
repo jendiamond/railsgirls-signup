@@ -40,16 +40,20 @@ class TutorialsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /tutorials/1
+  # PATCH/PUT /tutorials/  1
   def update
-    if params[:tutorial]
-      if @tutorial.update(tutorial_params)
-        redirect_to user_tutorial_path(@user, @tutorial), notice: 'Tutorial was successfully updated.'  and return
-      else
-        render :edit
-      end
+    if tutorial_params[:tryruby_image].present?
+      image_id = Cloudinary::Uploader.upload(tutorial_params[:tryruby_image])
+      @tutorial.update_attribute(:tryruby_image_id, image_id)
+    else
+      # other cases
     end
-    redirect_to :back and return
+    render
+  end
+
+  def upload_image(local_img_path, image_attr_name)
+    image_id = Cloudinary::Uploader.upload(local_img_path)
+    @tutorial.update_attribute(image_attr_name, image_id)
   end
 
   # DELETE /tutorials/1
@@ -67,6 +71,6 @@ class TutorialsController < ApplicationController
 
     def tutorial_params
       params.require(:tutorial).permit(:tryruby_image, :trygit_image,
-        :terminal_image, :htmlcss_image, :image, :user_id)
+        :terminal_image, :htmlcss_image, :image, :user_id, )
     end
 end
