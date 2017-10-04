@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   resources :coaches
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :members, controllers: {registrations: "registrations"}
+  devise_for :users
+
+  authenticated :user do
+    root 'secret#index', as: :authenticated_root
+  end
+
   resources :questions
   get 'static_pages/faq'
   get 'static_pages/about'

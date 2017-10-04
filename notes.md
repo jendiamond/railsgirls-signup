@@ -29,14 +29,7 @@ cl_image_tag("#{@tutorials.trygit_image_id}.jpg")
 SocketError in TutorialsController#update
 Failed to open TCP connection to api.cloudinary.com:443 (getaddrinfo: Name or service not known)
 
-Extracted source (around line #46):
-44
-45
-46
-47
-48
-49
-              
+
   def update
     if tutorial_params[:tryruby_image].present?
       image_id = Cloudinary::Uploader.upload(tutorial_params[:tryruby_image])

@@ -48,7 +48,9 @@ class TutorialsController < ApplicationController
     else
       # other cases
     end
-    render
+    redirect_to :back
+    #https://stackoverflow.com/questions/8952487/how-do-i-redirect-back-to-a-page-im-currently-on
+    #http://blog.bigbinary.com/2016/02/29/rails-5-improves-redirect_to_back-with-redirect-back.html
   end
 
   def upload_image(local_img_path, image_attr_name)
