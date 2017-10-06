@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h2 style="background-color:#ccc09e; padding:10px">Potential Rails Girls October&nbsp;21<sup>st</sup>&nbsp;&&nbsp;22<sup>nd</sup>&nbsp;2016 | <%= link_to 'New User', new_user_path %></h2>
-
+<div id="pending-users">
 <table style="background-color:#8a9e98">
   <thead>
     <tr>
@@ -49,6 +49,8 @@
         <tr>
           <td style="width:75px">PENDING</td>
           <td style="width:20px"><%= user.id %></td>
+          <td style="width:20px"><%= users.tutorials.tryruby_image %></td>
+          @tutorial.tryruby_image
           <td style="width:200px"><%= user.first_name %> <%= user.last_name %></td>
           <td style="width:150px"><%= user.email %></td>
           <td style="width:100px"><%= user.phone %></td>
@@ -66,3 +68,4 @@
     <% end %>
   </tbody>
 </table>
+</div>

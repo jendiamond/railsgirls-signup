@@ -1,16 +1,23 @@
+#https://apidock.com/rails/ActiveRecord/Base/find/class
+#http://guides.rubyonrails.org/v3.2.8/association_basics.html
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   def index
     @users = User.all
-    @tutorials = Tutorial.all
+    #@tutorials = Tutorial.all
+    @question = Question.find_by user_id:(@user.id)
+    @tutorial = Tutorial.find_by user_id:(@user.id)
+    @tutorial = Tutorial.find_by(user_id: 110)
   end
 
   # GET /users/1
   def show
-    @question = Question.find_by user_id:(@user.id)
-    @tutorial = Tutorial.find_by user_id:(@user.id)
+    @user = User.find(params[:id])
+    #@question = Question.find user_id:(@user.id)
+    #@tutorial = Tutorial.find_by user_id:(@user.id)
   end
 
   # GET /users/new
