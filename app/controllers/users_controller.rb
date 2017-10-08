@@ -7,17 +7,12 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-    #@tutorials = Tutorial.all
-    @question = Question.find_by user_id:(@user.id)
-    @tutorial = Tutorial.find_by user_id:(@user.id)
-    @tutorial = Tutorial.find_by(user_id: 110)
+    @questions = Question.all
+    @tutorials = Tutorial.all
   end
 
   # GET /users/1
   def show
-    @user = User.find(params[:id])
-    #@question = Question.find user_id:(@user.id)
-    #@tutorial = Tutorial.find_by user_id:(@user.id)
   end
 
   # GET /users/new
@@ -72,11 +67,12 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
-      @tutorial = Tutorial.find(params[:user_id])
+      @question = Question.find_by user_id:(params[:id])
+      @tutorial = Tutorial.find_by user_id:(params[:id])
     end
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :phone,
+      params.require(:user).permit(:id, :first_name, :last_name, :email, :phone,
         :zip_code, :twitter_handle, :github_user_name, :over_21, :age,
         :operating_system, :workshop, :rating, :coach, :pair, :accepted,
         :attended, :phase_five_coach, :cancellation, :status,

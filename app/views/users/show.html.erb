@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% if current_member %>
-  <h2>Hi <%= @user.first_name %> Your ID is: <%= @user.id %></h2>
+  <h2>Hi <%= @user.first_name.capitalize %> Your ID is: <%= @user.id %></h2>
   <h4><%= @user.email %></h4>
     <h3>Your user page is:<br/>
      <a href="https://railsgirls-signup.herokuapp.com/users/<%= @user.id %>">https://railsgirls-signup.herokuapp.com/users/<%= @user.id %></a></h3>
