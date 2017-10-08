@@ -4,7 +4,7 @@
 
 <table style="background-color:#8a9e98">
       <th>UserId</th>
-      <th>Name</th>
+      <!--<th>Name</th>-->
       <th>TryRuby</th>
       <th>TryRuby</th>
       <th>TryGit</th>
@@ -20,7 +20,7 @@
       <% @tutorials.each do |tutorial| %>
       <tr>
         <td><%= tutorial.user_id %></td>
-        <td><%= user.first_name %> <%= user.last_name %></td>
+        <td><%#= user.first_name %> <%= user.last_name %></td>
         <td>
           <% if tutorial.try_ruby %>
             <%= image_tag "tryruby-success.png", width: '30' %>
