@@ -61,6 +61,12 @@ class UsersController < ApplicationController
     @questions = Question.all
   end
 
+  def tutorials
+    @users = User.all
+    @tutorials = Tutorial.all
+    @questions = Question.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

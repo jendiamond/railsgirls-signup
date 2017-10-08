@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/rgla'
   get 'users/accepted'
   get 'users/pending'
+  get 'users/tutorials'
   root 'static_pages#home'
   resources :users do
     resources :tutorials, only: [:show, :update, :index]
