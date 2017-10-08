@@ -6,9 +6,6 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
-    @questions = Question.all
-    @tutorials = Tutorial.all
   end
 
   # GET /users/1
@@ -61,6 +58,7 @@ class UsersController < ApplicationController
   def pending
     @users = User.all
     @tutorials = Tutorial.all
+    @questions = Question.all
   end
 
   private
