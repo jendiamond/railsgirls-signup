@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h2 style="background-color:#ccc09e; padding:10px">Pending Rails Girls October&nbsp;21<sup>st</sup>&nbsp;&&nbsp;22<sup>nd</sup>&nbsp;2016</h2>
+<h2 style="background-color:#ccc09e; padding:10px">Pending Rails Girls October&nbsp;21<sup>st</sup>&nbsp;&&nbsp;22<sup>nd</sup>&nbsp;2017</h2>
 
 <table style="background-color:#8a9e98">
       <th>UserId</th>
@@ -19,9 +19,8 @@
       <% @tutorials.each do |tutorial| %>
         <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %> <%= user.last_name %></td>
         <td><%= tutorial.user_id %></td>
-
+        <td><%= user.first_name %> <%= user.last_name %></td>
         <td>
           <% if tutorial.try_ruby %>
             <%= image_tag "tryruby-success.png", width: '30' %>
