@@ -16,7 +16,9 @@
 
   <tbody>
       <% @tutorials.each do |tutorial| %>
+        <% @users.each do |user| %>
       <tr>
+        <td><%= user.first_name %> <%= user.last_name %></td>
         <td><%= tutorial.user_id %></td>
 
         <td>
@@ -47,6 +49,7 @@
         </td>
         <td><%= tutorial.htmlcss_image_updated_at.try(:strftime,'%m.%d %H:%M') %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
