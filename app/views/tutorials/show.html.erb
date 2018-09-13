@@ -8,15 +8,15 @@ and are an Official Rails Girl!</strong> :)</h3>
 <h3>Your student pair is: <%= @user.pair %>.</h3>
 
 <p><strong>The full schedule for the weekend is posted here: <a href="http://railsgirls.com/la#schedule">http://railsgirls.com/la#schedule</a></strong></p>
-<p>Friday, October 20th 7pm - 10pm for the install-fest.</p>
-<p>Saturday, October 21st 9am-6pm for the Workshop.</p>
+<p>Friday, October 19th 6pm - 10pm for the install-fest.</p>
+<p>Saturday, October 20th 9am-6pm for the Workshop.</p>
 
 <hr/>
 <p>If for any reason you need to cancel please contact us at railsgirlsla@gmail.com We have a limited number of people we can accept so please don't take a spot someone else would love to have. :)</p>
 <hr/>
 <h2><strong>The Third Level</strong></h2>
 
-<h3>The Install-fest on Friday October  20th 7pm - 10pm</h3>
+<h3>The Install-fest on Friday October  19th 6pm - 10pm</h3>
 
 <p>If you feel like trying to install Rails, et cetera, before the install-fest you can try it out but <strong>you still have to come to the install-fest to get it all checked</strong>. It really holds up the whole group and makes it hard on the coaches if you don’t come to the install-fest even if you think you are completely ready.</p>
 
@@ -125,7 +125,7 @@ There will be a coach training session.
             <h3><%= image_tag("unlock.png") %> Sweet! You have passed the Fox Level.</h3>
             <%= image_tag("tryruby-success.png") %>
         <% else %>
-          <%= image_tag("fox.gif") %>1. <a href="http://tryruby.org">Try Ruby</a>
+          <%= image_tag("fox.gif") %>1. <a href="https://ruby.github.io/TryRuby/">Try Ruby</a>
           Type next to start.
           <h4>Upload a screenshot of the last page you complete.</h4>
           <p>This should be the last page of the tutorial. :)</p>
@@ -154,8 +154,9 @@ There will be a coach training session.
           <h3><%= image_tag("unlock.png") %> Awesome! You have passed the Octocat Level.</h3>
           <%= image_tag("trygit-success.jpg") %>
         <% else %>
-          <%= image_tag "octocat.png" %> 2. <a href="https://try.github.io/levels/1/challenges/1">Try Git</a> 
-          Write down all the git commands you learned.
+          Watch the first video here: https://www.pluralsight.com/courses/code-school-git-real
+          <%= image_tag "octocat.png" %> 2. <a href="https://www.codecademy.com/courses/learn-git/lessons/git-workflow/exercises/hello-git">Try Git</a> 
+          Do this tutorial and make a cheatsheet of all the commands you learn.
           <h4>Upload a list of all the commands you learned. You can use this as a cheat sheet during the workshop.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
@@ -215,7 +216,7 @@ There will be a coach training session.
           <%= image_tag("snake.png") %>4. <a href="https://dash.generalassemb.ly/">Learn to Make Awesome Websites</a> (Only the first one.)
 
           You have to sign up to go through the course but it is FREE beside the fact that you'll get spam from GA. You can unsubscribe once they start sending it.
-          <h4>Upload a screenshot of the last page you complete.</h4>
+      <h4>Upload a screenshot of the last page you complete.</h4>
           <%= simple_form_for [@user, @tutorial], html: {multipart: true} do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs">
