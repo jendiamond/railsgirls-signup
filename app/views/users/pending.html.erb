@@ -18,30 +18,34 @@
   <tbody>
       <% @tutorials.each do |tutorial| %>
       <tr>
-        <td><%= tutorial.user_id %></td>
         <td>
-          <% if tutorial.try_ruby %>
+          <% (tutorial.user_id).to_i > 159 %>
+            <%= tutorial.user_id %>
+          <% end %>
+        </td>
+        <td>
+          <% if tutorial.try_ruby && ((tutorial.user_id).to_i > 159) %>
             <%= image_tag "tryruby-success.png", width: '30' %>
           <% end %>
         </td>
         <td><%= tutorial.tryruby_image_updated_at.try(:strftime,'%m.%d %H:%M') %></td>
 
         <td>
-          <% if tutorial.try_git %>
+          <% if tutorial.try_git && ((tutorial.user_id).to_i > 159) %>
             <%= image_tag "trygit-success.jpg", width: '30' %>
           <% end %>
         </td>
         <td><%= tutorial.trygit_image_updated_at.try(:strftime,'%m.%d %H:%M') %></td>
 
         <td>
-          <% if tutorial.terminal %>
+          <% if tutorial.terminal && ((tutorial.user_id).to_i > 159) %>
             <%= image_tag "terminal-success.jpg", width: '30' %>
           <% end %>
         </td>
         <td><%= tutorial.terminal_image_updated_at.try(:strftime,'%m.%d %H:%M') %></td>
 
         <td>
-          <% if tutorial.html_css %>
+          <% if tutorial.html_css && ((tutorial.user_id).to_i > 159) %>
             <%= image_tag "htmlcss-success.jpg", width: '30' %>
           <% end %>
         </td>
