@@ -8,6 +8,9 @@ $ `rails new your_app_name --database=postgresql`
 
 * Database: Postgres
 
+postgresql 11.3 is already installed
+To upgrade to 11.5_1, run `brew upgrade postgresql
+
 * Deployment instructions  
 $ `git clone git@github.com:jendiamond/railsgirls_signup.git`  
 $ `bundle`  
