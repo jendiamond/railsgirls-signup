@@ -120,13 +120,16 @@ input[type="checkbox"] {
 .jumbotron {
 background-color: #C6E2DA;
 /*background-color:none !important;*/
+  h1 {
+    font-size: 44px !important;
+  }
 }
 .jumbotron.h1 {
- font-size: 44px;
+ font-size: 44px !important;
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 44px !important;
 }
 sup {
   font-size: 50%;
@@ -220,6 +223,6 @@ background-color: $bgDefault;
 .jumbotron {
     padding-top: 15px;
     padding-bottom: 30px;
-    font-size: 44px;
+    font-size: 44px !important;
   }
 }
