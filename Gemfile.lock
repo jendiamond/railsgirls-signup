@@ -149,7 +149,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.6.0)
+    puma (3.12.6)
     rack (2.0.1)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
@@ -293,7 +293,7 @@ DEPENDENCIES
   paperclip-cloudinary
   pg (~> 0.18)
   pry (~> 0.10.4)
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (~> 5.0.0.1)
   rails-controller-testing
   rails_admin (>= 1.0.0.rc)
