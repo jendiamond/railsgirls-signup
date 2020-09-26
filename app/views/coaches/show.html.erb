@@ -12,6 +12,19 @@
   <% end %>
 </h3>
 <hr/>
+
+
+<p>
+  <strong>Installfest:</strong>
+  <%= @coach.installfest %>
+</p>
+
+<p>
+  <strong>Days available:</strong>
+  <%= @coach.days %>
+</p>
+
+
 <p>
   <strong>Operating System:</strong>
   <%= @coach.operating_system %>
@@ -20,10 +33,7 @@
   <% end %>
 </p>
 
-<p>
-  <strong>Days available:</strong>
-  <%= @coach.days %>
-</p>
+
 
 <p>
   <% if @coach.student1.present? && @coach.student2.present? %>
