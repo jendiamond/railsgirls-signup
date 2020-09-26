@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007055452) do
+ActiveRecord::Schema.define(version: 20200926054031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20161007055452) do
     t.boolean  "coach_august_15_spokeo"
     t.boolean  "coach_march_16_zest"
     t.boolean  "work_at_sponsoring_company"
+    t.string   "installfest"
   end
 
   create_table "members", force: :cascade do |t|
@@ -146,7 +147,6 @@ ActiveRecord::Schema.define(version: 20161007055452) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.boolean  "cancellation"
-    t.string   "status"
   end
 
   add_foreign_key "tutorials", "users"
