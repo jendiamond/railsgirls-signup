@@ -14,33 +14,40 @@
 
     <p style="font-size:15px">Contact railsgirlsla@gmail.com with any further questions.</b></p>
 
-    <%= f.input :first_name, required: true %>
-    <%= f.input :last_name, required: true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :twitter_handle, placeholder: "https://twitter.com/your-user-name", required: false %>
-    <%= f.input :github_user_name, placeholder: "https://github.com/your-user-name", required: false %>
-    <%= f.input :phone, required: false %>
-    <%= f.input :zip_code, required: false %>
-    <%= f.input :over_21, required: true , as: :radio_buttons %>
-    <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
-    <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], required: true, as: :radio_buttons %>
-    <%= f.input :cancellation, as: :radio_buttons %>
-    
-    <%= f.simple_fields_for :question do |q| %>
-      <%= q.input :newbie, label: "I am a total newbie :)", required: true, as: :radio_buttons %>
-      <%= q.input :html_css, label: "I am familiar with HTML / CSS", required: true, as: :radio_buttons %>
-      <%= q.input :tutorials, label: "I have done online Ruby / Rails tutorials", required: true, as: :radio_buttons %>
-      <%= q.input :study_group, label: "I attend a Study Group", required: true, as: :radio_buttons %>
-      <%= q.input :program, label: "I have written a program (any language)", required: true, as: :radio_buttons %>
-      <%= q.input :website, label: "I have created a website and launched it on the web", required: true, as: :radio_buttons %>
-      <%= q.input :work, label: "I currently work in tech", required: true, as: :radio_buttons %>
-      <%= q.input :bootcamp, label: "I have attended an immersive bootcamp program", required: true, as: :radio_buttons %>
-      <%= q.input :compsci, label: "I have or am getting a CS degree", required: true, as: :radio_buttons %>
-      <%= q.input :rlsgrl_rlsbrg, label: "I have attended Rails Girls / Railsbridge", required: true, as: :radio_buttons %>
-      <%= q.input :continue, label: "Do you think you will continue learning to program after the workshop?", required: true %>
-      <%= q.input :support, label: "Do you have any people to support you with this goal?", required: true %>
-      <%= q.input :experience, label: "Previous Experience. Do you have any previous programming experience? Please explain. What languages? For how long? What did you make? In school or on your own? Do you currently program? Did you attend a code school? This helps us group students when working in small groups.", required: true %>
-    <% end %>
+    <div class="form-inputs coach-labels">
+      <%= f.input :first_name, required: true %>
+      <%= f.input :last_name, required: true %>
+      <%= f.input :email, required: true %>
+
+      <%= f.input :days, collection: [ "Installfest, Rails Girls & viva-LA-vue: Oct 16th, 17th. and 24th.", "Installfest & Rails Girls Only, Oct. 16th and 17th", "Installfest & viva-LA-vue Only, Oct. 16th and 24th."],label: "I am excited to attend...", required: true, as: :radio_buttons %>
+
+      <%= f.input :snailmail, placeholder: "We like to send you some fun swag!  If you'd like, address please? ☺ ", required: false %>
+
+      <%= f.input :twitter_handle, placeholder: "https://twitter.com/your-user-name", required: false %>
+      <%= f.input :github_user_name, placeholder: "https://github.com/your-user-name", required: false %>
+      <%= f.input :phone, required: false %>
+      <%= f.input :zip_code, required: false %>
+      <%= f.input :over_21, required: true , as: :radio_buttons %>
+      <%= f.input :age, collection: 13..20, prompt: "If not 21 Select your age" %>
+      <%= f.input :operating_system, collection: [ "Mac", "Linux", "Windows"], required: true, as: :radio_buttons %>
+      <%= f.input :cancellation, as: :radio_buttons %>
+      
+      <%= f.simple_fields_for :question do |q| %>
+        <%= q.input :newbie, label: "I am a total newbie :)", required: true, as: :radio_buttons %>
+        <%= q.input :html_css, label: "I am familiar with HTML / CSS", required: true, as: :radio_buttons %>
+        <%= q.input :tutorials, label: "I have done online Ruby / Rails tutorials", required: true, as: :radio_buttons %>
+        <%= q.input :study_group, label: "I attend a Study Group", required: true, as: :radio_buttons %>
+        <%= q.input :program, label: "I have written a program (any language)", required: true, as: :radio_buttons %>
+        <%= q.input :website, label: "I have created a website and launched it on the web", required: true, as: :radio_buttons %>
+        <%= q.input :work, label: "I currently work in tech", required: true, as: :radio_buttons %>
+        <%= q.input :bootcamp, label: "I have attended an immersive bootcamp program", required: true, as: :radio_buttons %>
+        <%= q.input :compsci, label: "I have or am getting a CS degree", required: true, as: :radio_buttons %>
+        <%= q.input :rlsgrl_rlsbrg, label: "I have attended Rails Girls / Railsbridge", required: true, as: :radio_buttons %>
+        <%= q.input :continue, label: "Do you think you will continue learning to program after the workshop?", required: true %>
+        <%= q.input :support, label: "Do you have any people to support you with this goal?", required: true %>
+        <%= q.input :experience, label: "Previous Experience. Do you have any previous programming experience? Please explain. What languages? For how long? What did you make? In school or on your own? Do you currently program? Did you attend a code school? This helps us group students when working in small groups.", required: true %>
+      <% end %>
+    </div>
     <%= f.button :submit, "SUBMIT", class: "rg-button" %>
   <% end %>
 </div>

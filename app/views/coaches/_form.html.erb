@@ -1,7 +1,7 @@
 <%= simple_form_for(@coach) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs coach-labels">
     <%= f.input :first_name, required: true %>
     <%= f.input :last_name, required: true %>
     <%= f.input :email, required: true %>

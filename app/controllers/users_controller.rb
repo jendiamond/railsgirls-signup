@@ -77,7 +77,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:id, :first_name, :last_name, :email, :phone,
-        :zip_code, :twitter_handle, :github_user_name, :over_21, :age,
+        :zip_code, :days, :snailmail, :twitter_handle, :github_user_name, :over_21, :age,
         :operating_system, :workshop, :rating, :coach, :pair, :accepted,
         :attended, :phase_five_coach, :cancellation, :status,
           :question_attributes => [:newbie,:html_css,:tutorials,:study_group,
