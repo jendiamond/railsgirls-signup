@@ -48,7 +48,7 @@ GEM
     autoprefixer-rails (6.4.0.2)
       execjs
     aws_cf_signer (0.1.3)
-    bcrypt (3.1.11)
+    bcrypt (3.1.16)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -278,6 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (>= 3.1.16)
   better_errors (~> 2.1, >= 2.1.1)
   bootstrap-sass
   byebug
@@ -313,4 +314,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.15.1
+   1.17.3
